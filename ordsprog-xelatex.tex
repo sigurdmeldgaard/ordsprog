@@ -1,0 +1,2282 @@
+% -*- TeX-engine: xetex coding: utf-8 -*-
+\documentclass[a4paper]{article}
+\usepackage[para]{footmisc}
+\usepackage{fullpage}
+\usepackage{fontspec}
+%\usepackage{paralist}
+\usepackage{tabu}
+\usepackage{hyperref}
+%\usepackage{navigator}
+%\embeddedfile{sourcecode}{./\jobname.tex}
+\setromanfont[Ligatures=TeX]{CMU Serif}
+\setsansfont[Ligatures=TeX]{CMU Sans Serif}
+\setmonofont[Ligatures=TeX]{CMU Typewriter Text}
+% \setmainfont[Ligatures=TeX]{Linux Libertine O}
+\usepackage{polyglossia}
+\usepackage{marginnote}
+\setdefaultlanguage[]{danish}
+\setotherlanguage[]{russian}
+\pagestyle{headings}
+\usepackage{multind}
+\usepackage{xunicode}
+%\usepackage{pfnote}https://cloud.sagemath.com/dd54c4e6-02d7-4035-8bf0-adf80f8e0bef/raw/.smc/root/tmp/.9ad549db-2b69-4e1a-a07b-ab95bdf27726/1.png
+%\usepackage{dblfnote}
+%\DFNalwaysdouble % for this example
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+
+\title{Danske ordsprog --- med russiske paralleller}
+\author{Knud-Erik Kjær Madsen \and Redigeret af Sigurd Meldgaard}
+\date{}
+\makeindex{russisk}
+\makeindex{dansk}
+\begin{document}
+\maketitle
+\newenvironment{overslist}
+{}{}
+%{\begin{compactitem}}
+%{\end{compactitem}}
+\newcommand{\mitem}{\par\hangindent=0.35cm\textbullet\ }
+%\par
+%\noindent
+%\hskip -.25cm \raisebox{.02cm}{$\bullet$}\hskip 3pt}%\item}
+\newcommand{\ordsprog}[2]{
+\noindent
+\begin{tabu}to \textwidth {XX[2]}
+\textdanish{#1}
+  &
+\begin{overslist}%
+\hangindent=0.35cm
+\textbullet\
+\begin{russian}#2\par
+\end{russian}
+\end{overslist}%
+\end{tabu}
+\vskip5mm
+}
+\newcommand{\ru}[1]{\begin{russian}#1\end{russian}}
+\newenvironment{letter}[1]
+{\vskip0.5cm \section*{#1}
+}
+{}
+\newcommand{\dui}[1]{\index{dansk}{#1}}
+\newcommand{\di}[1]{\index{dansk}{#1}#1}
+\newcommand{\did}[2]{\index{dansk}{#1}#2}
+\newcommand{\mw}[1]{\index{dansk}{#1}\emph{#1}}
+\newcommand{\mwni}[1]{\emph{#1}}
+\newcommand{\ri}[1]{\index{russisk}{#1}#1}
+\newcommand{\rid}[2]{\index{russisk}{#1}#2}
+\newcommand{\fn}[1]{}
+%\newcommand{\fn}[1]{\footnote{\textdanish{#1}}}
+Ordsprogene er udvalgt så de har klare russiske paralleller og er ordnet alfabetisk efter deres danske emne (fremhævet med kursiv).
+
+Stor tak til Annie Christensen og Svetlana Alekceebha Chouvalova for tålmodigt at stille deres faglige ekspertise til rådighed og komme med utallige forslag til rettelser og forbedringer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -*- TeX-engine: xetex, coding: utf-8 -*-
+% ;;  1! 2ё 3ъ 4Ё 5 6^ 7& 8* 9( 0) -_ Ч  Ю
+% ;;   Я  В  Е  Р  Т  Ы  У  И  О  П  Ш  Щ
+% ;;    А  С  Д  Ф  Г  Х  Й  К  Л  ;: '" Э
+% ;;     З  Ь  Ц  Ж  Б  Н  М  ,< .> /?
+
+% ;;  1! 2ё 3ъ 4Ё 5% 6^ 7& 8* 9( 0) -_ Ч  Ю
+% ;;   Ђ  Ѓ  Є  Ѕ  І  Ї  Ј  Љ  Њ  Ћ  Ш  Щ
+% ;;    Ќ  Ў  Џ  Ф  Г  Х  Й  К  Л  ;: '" Э
+% ;;     З  Ь  Ц  Ж  Б  Н  М  ,< .> /?
+\letter{A}
+\dui{a}
+\ordsprog{Har man sagt \mwni{A}, må man også sige \di{B}.}
+         {Кто сказа́л \ri{А}, тот до́лжен сказа́ть и \ri{Б}.
+%          \mitem Взя́лся за гуж\fn{bestemt rem på seletøj der holder forbinder stangen til seletøjet}, не говори́, что не дюж\fn{stærk}.
+         }
+\ordsprog{Aber forbliver \mw{aber},
+               selv om de \mbox{klæder} sig i \di{fløjl} og \di{silke}.}
+        {Свинья́ и в золото́м оше́йнике\fn{halsbånd} --- \mbox{\ri{свинья́}}.}
+\dui{adel}
+\ordsprog{\mwni{Adel} for\di{pligt}er.}
+        {\rid{положе́ние}{Положе́ние}\fn{stilling} обя́зывает.}
+\dui{alderdom}
+\ordsprog{\mwni{Alderdom} er knarvorn.
+%(Alderdommens byr\-de er den tungeste af alle.)
+}
+        {\rid{ста́рость}{Ста́рость} не \ri{ра́дость}.
+         \mitem  Ста́рость не кра́сные\fn{smukke, skønne} дни.}
+\dui{alderdom}
+\ordsprog{\mwni{Alderdom} og \di{visdom} følges ikke altid ad.}
+         {До́лго про́жил, да \ri{ум}а́ не на́жил\fn{\ru{на́жить}=erhverve}.
+        \mitem Борода́ вы́росла, а ума́ не вы́несла\fn{\ru{вы́нести}=medbringe}.
+        \mitem Мо́лодость не без глу́пости, ста́рость не без ду́рости.}
+\dui{alderdom}
+% \ordsprog{To \mw{alen} af et stykke.}
+%         {Они́ два \rid{сапо́г}{сапога́}
+%         па́ра.
+%         \mitem Они́ одного́
+%         \rid{по́ле}{по́ля}\fn{mark} я́года\fn{bær}.}
+% \ordsprog{Én for \mw{alle} og alle for én.}
+%         {\rid{оди́н}{Оди́н} за всех, \ri{все} за одного́.}
+\dui{ansigtet}
+\dui{øje}
+\ordsprog{\mwni{Ansigtet}(øjnene) er sjælens spejl.}
+        {
+%         на \rid{лицо́}{лице́} не \mbox{утаи́тся}
+%         Глава́ зе́ркало души́.
+%         \mitem Что в се́рдце ва́рится\fn{\ru{ва́риться}=brygge},
+        Глаза́ --- зе́рколо души́.
+        }
+\dui{appetit}
+\ordsprog{\mwni{Appetitten} kommer med maden.}
+         {\rid{аппети́т}{Аппети́т} прихо́дит во
+            вре́мя \rid{еда́}{еды́}.}
+\dui{april}
+\ordsprog{\mwni{Aprils} væde er bondens glæde.}
+         {Апре́ль с водо́ю, май с траво́ю\fn{græs}.}
+\ordsprog{Den, der ikke vil \mw{arbejde}, skal heller ikke have \di{føde}n.}
+        {Кто не рабо́тает, тот и не ест.
+        \mitem \rid{рабо́тать}{Рабо́тать} не
+        заста́вят\fn{tvinges}, и есть не \mbox{поса́дят}\fn{\ru{посади́ть}=bringe til sæde}.}
+\ordsprog{Lidet \mw{arbejde}, liden \di{løn}.}
+        {\rid{По заслу́га}{По заслу́гам}\fn{tjeneste} и награ́да\fn{løn}.}
+\ordsprog{Hvor der er \mw{arbejde}, er der lykke.}
+         {Где \ri{труд}, там и \ri{сча́стье}.}
+\dui{arbejder}
+\ordsprog{\mwni{Arbejderen} er sin \di{løn} værd.}
+         {Како́в \ri{рабо́тник}, такова́ ему́ и \ri{пла́та}.
+        \mitem Какова́ \ri{рабо́та}, такова́  и \ri{пла́та}.
+        \mitem По рабо́́те пла́та.}
+\ordsprog{Den ene har \mw{arbejdet}, den anden lønnen.}
+        {\rid{медве́д}{Медве́дь}\fn{bjørn} пля́шет\fn{\ru{пля́сать}=danse}, а цыга́н\fn{sigøjner} \ri{де́ньги} берёт.}
+%         \mitem Оди́н собира́ет\fn{gaber}, друго́й зева́ет\fn{gaber}.
+\ordsprog{\mwni{Arbejdet} bærer lønnen i sig selv.}
+{Рабо́та уже́ само́ по себе́ явля́ется\fn{viser sig} награ́дой.}
+\letter{B}
+\dui{bage}
+\ordsprog{Der \mwni{bages} også godt \di{brød} i \di{fremmede lande}.}
+        {\rid{хлеб}{Хлеб} везде́\fn{overalt} хоро́ш, и у нас, и за́ морем.}
+\ordsprog{Man skal ikke give \mw{bagerbørn} hvedebrød.}
+        {В Ту́лу\fn{byen Tula er kendt for sine samovarer.} со свои́м самова́ром не е́здят.
+        \mitem В лес дрова́\fn{brænde} не во́зят, в \ri{коло́дец}\fn{brønd} воды́ не льют\fn{hælder}.}
+\ordsprog{Hellere \di{forklog} end \mw{bagklog}.}
+        {Челове́к за́дним умо́м кре́пок\fn{stærk}.
+        \mitem За́дним умо́м\fn{bagklogskab} де́ла не попра́вишь\fn{retter op}.
+        \mitem Пора́ ушла́, так ум пришёл.}
+\ordsprog{Brændt \mw{barn} skyr ilden.}
+        {Ожёгся\fn{brændt} на молоке́, ста́нешь дуть\fn{blæse} и на́ воду.
+        \mitem Обжёгшись на молоке́, бу́дешь дуть и на́ воду.
+        \mitem Пу́ганая\fn{skræmt} воро́на\fn{krage} куста́\fn{busk} бои́тся.}
+\ordsprog{Kært \mw{barn} har mange \di{navne}.}
+        {У ми́лого дитя́ти мно́го имён.}
+\dui{barn}
+\ordsprog{Det er for sent at kaste \di{brønden} til, når \mwni{barnet}
+er druknet.}
+        {Парни́шка\fn{knøs} ввали́лся\fn{faldt}, так и\fn{\ru{так и}=såvel som} коло́дец накры́ли.
+        \mitem По́сле дра́ки\fn{slåskamp} кулака́ми\fn{næverne} не ма́шут\fn{knytter}.}
+\dui{begynde}
+\ordsprog{Godt \mwni{begyndt} er halvt \di{fuldendt}.}
+        {Хоро́шее нача́ло --- полови́на де́ла.
+        \mitem До́брое \ri{нача́ло} не без \rid{коне́ц}{конца́}.}
+\ordsprog{Al \mw{begyndelse} er svær.}
+        {         Пе́рвый \ri{блин} --- ко́мом\fn{klump}.
+        \mitem Стра́шно де́ло до начи́ну.
+\mitem Лиха́\fn{\ru{лихо́й}=slem, svær} беда́\fn{ulykke}  --- нача́ло.}
+\dui{ben}
+\ordsprog{Den, der kommer sent, må gnave \mwni{benene}.}
+        {По́здно пришёл, то́лько \rid{кость}{ко́сти}\fn{knogler} нашёл.
+        \mitem Кто по́здно пришёл, тому́ мосо́л\fn{kødben}.}
+\dui{bjerg}
+\ordsprog{\mwni{Bjerget} skal barsle, og der fødes en latterlig mus.}
+        {\ri{Гора́} родила́ \ri{мышь}.}
+\dui{bjerg}
+\ordsprog{Når \mwni{bjerget} ikke vil komme til Muhamed, må Muhamed
+komme til bjerget.}
+        {Е́сли \ri{гора́} не идёт к \rid{Магоме́т}{Магоме́ту}, то
+        Магоме́т идёт к горе́.}
+\dui{bjerg}
+\ordsprog{Tro flytter bjerge.}
+         {Ве́ра дви́гает го́ры.}
+\dui{bjørn}
+\ordsprog{Man skal ikke sælge skindet, før \mwni{bjørnen} er skudt.}
+        {Не уби́в \rid{медве́д}{медве́дя}, шку́ры\fn{huden} не продава́й\fn{sælg}.
+        \mitem Не дели́ шку́ру неуби́того медве́дя.}
+%\ordsprog{Det, man først bliver \mw{blind} på, er øjnene.}
+%        {Не \ri{ви́деть}, что под но́сом твори́тся (и где
+%        то́лько бы́ли мои́ \ri{глаза́}).}
+\dui{blind}
+\ordsprog{I de \mwni{blindes} rige er den enøjede konge.}
+        {В слепо́м ца́рстве \ri{криво́й}\fn{enøjet}  --- \ri{царь}.
+        \mitem На безры́бье\fn{fiskemangel} и рак\fn{krebs} \ri{ры́ба}.
+        \mitem Меж слепы́х и криво́й зря́чий\fn{seende}.}
+\dui{blod}
+\ordsprog{\mwni{Blodet} er aldrig så tyndt, det er jo tykkere end vand.}
+        {Кро́вное\fn{blod-} родство́\fn{afstamning} пре́жде всего́.}
+% \ordsprog{Den, der sår \mw{blæst}, skal høste \mbox{storm}.}
+%         {Кто посе́ет ве́тер, пожнёт бу́рю.
+%         \mitem Посе́явший ве́тер пожнёт\fn{høste} бу́рю\fn{storm}.}
+\ordsprog{Man skal ikke slå større \mw{brød} op, end man kan bage.}
+        {
+        Взя́ться за непоси́льное де́ло.
+%         Кто за всё хвата́ется\fn{griber om}, тот ничего́ не сде́лает\fn{udfører}.
+%         \mitem За всё бра́ться, ничего́ не сде́лать.
+% %        \mitem Не бери́сь за гуж\fn{del af seletøj}, ко́ли\fn{hvis} не дюж.
+%         \mitem Взя́вшись за де́ло, не говори́ что слаб\fn{svag},
+%                 что не хвата́ет\fn{slår til} сил.
+%        % slettet \mitem Мно́гого жела́ть, добра́ не вида́ть.
+%         \mitem Мно́гого иска́ть\fn{søge} ста́нешь\fn{\ru{стать}=give sig til}, ничего́ не доста́нешь\fn{ru{доста́ть}=opnå}.
+%         \mitem Мно́гого жела́л, да ничего́ не пойма́л\fn{fik fat på}.
+        }
+\ordsprog{Hårdt \mw{brød} gør kinden rød.}
+        {\rid{хлеб}{Хлеб} да\fn{og} \ri{вода́} --- здоро́вая еда́.}
+\ordsprog{Den enes \mw{brød}, den andens \di{død}.}
+        {И то сча́стье, что ино́му вёдро\fn{godt vejr}, ино́му
+        несча́стье.
+        \mitem \rid{стро́ить}{Стро́ить}\fn{at bygge} своё \ri{сча́стье} на
+        чужо́м\fn{fremmeds} \ri{несча́стье}.
+        \mitem \rid{Ко́шка}{Ко́шке} игру́шки\fn{legetøj}, а мы́шке слёзки\fn{tårer}.}
+\dui{bukser}
+\ordsprog{Man skal ikke \di{skræve} længere, end \mwni{bukserne} kan
+        holde.}
+        {По одёжке\fn{klæder} протя́гивай\fn{stræk} но́жки\fn{benene}.}
+\dui{busk}
+\ordsprog{Den, der er ræd for \mwni{busken}, kommer sent til skovs.}
+        {Во́лка\fn{ulv} боя́ться, в лес не ходи́ть.
+        \mitem Сме́рти\fn{døden} боя́ться, на све́те\fn{verden} не жить.}
+\dui{bæk}
+\ordsprog{Mange \mwni{bække} små gør en stor \di{å}.}
+        {С ми́ру по ни́тке\fn{tråd} --- го́лому' руба́шка\fn{undertrøje}.
+        \mitem Из ма́лого скла́дывается\fn{skabes} вели́кое.
+        \mitem Из кро́шек\fn{krummer} ку́чкa\fn{håndfuld}, из ка́пель\fn{dråber} мо́ре\fn{hav}.
+        \mitem По ни́тке и до клубка́\fn{garnnøgle} дохо́дят\fn{når}.}
+\ordsprog{Af \mw{børn} og \di{fulde folk} skal man høre
+        \di{sandheden}.}
+        {Уста́ми\fn{mund} младе́нца\fn{barn} (младе́нцев) глаго́лет\fn{lyder} и́стина\fn{sandhed}.
+        \mitem Глу́пый\fn{dumme} да ма́лый всегда́
+                и́стину (пра́вду) говоря́т.}
+\ordsprog{Lige \mw{børn} leger bedst.}
+        {Подо́бный\fn{ligemand} подо́бного лю́бит.
+        \mitem Рыба́к\fn{fisker} рыбака́ ви́дит издалека́
+        \mitem Свой своего́ и́щет\fn{søger}.}
+\ordsprog{Små \mw{børn}, små sorger, store børn, store sorger.}
+        {С ма́лыми детьми́ го́ре\fn{sorg}, с больши́ми вдо́е\fn{dobbelt}.
+        \mitem Без дете́й го́ре, а с детьми́ вдо́е.}
+\letter{D}
+\ordsprog{Hver \mw{dag} har nok i sin plage.}
+        {Вся́кому дню подоба́ет\fn{være nok} забо́та\fn{omsorg} своя́.
+        \mitem Довле́ет\fn{tilstrækkelig} дне́ви зло́ба\fn{onde} его́.}
+\dui{dag}
+\ordsprog{\mwni{Dagene} længes, vinteren strenges.}
+        {\ri{Со́лнце} на \ri{ле́то}, \ri{зима́} на \ri{моро́з}.}
+\ordsprog{Alt kommer for en \mw{dag}.}
+        {И ши́ло\fn{syl} в мешке́\fn{pose} не ута́ишь\fn{skjule}.
+%        \mitem Со́рок неде́ль хоть кого́ на
+%                чи́стую во́ду вы́ведут.
+        \mitem Как бы мал ого́нь\fn{ild} ни́ был, всегда́ от него́ дым\fn{røg}.}
+\ordsprog{Den sidste \mw{dag} kommer for os alle.}
+        {День да ночь, су́тки\fn{døgn} прочь\fn{væk}, а смерть всё бли́же\fn{nærmere}.}
+\ordsprog{I \mw{dag} mig, i morgen dig.}
+        {\rid{ны́не}{Ны́не}\fn{i dag/nu} меня́, \ri{за́втра} тебя́.}
+\dui{daler}
+\ordsprog{Hvo ikke sparer på skillingen, får aldrig \mwni{daleren}.}
+        {Копе́йка рубль бережёт.
+       % \mitem Кто не бережёт\fn{sparer/passer på} копе́йки, сам рубли́ не сто́ит\fn{fortjener}.
+        \mitem Копе́йка к копе́йке --- проживёт\fn{nok til at leve for} и семе́йка\fn{lille familie}.
+        }
+\dui{datter}
+\ordsprog{Vil du have \mwni{datteren}, så prøv at vinde moderen.}
+        {Выбира́й\fn{vælg} коро́ву\fn{koen} по рога́м\fn{hornene}, а де́вку по рода́м\fn{slægt}.}
+\dui{dovenskab}
+\ordsprog{\mwni{Dovenskab} går foran, og \di{armod} følger lige efter.
+        (Dovenskab er \di{roden} til alt \di{ondt}.)}
+        {Ле́ность\fn{dovenskab} нахо́дит (наво́дит на) бе́дность\fn{fattigdom}.
+        \mitem Лень мужика́ не ко́рмит\fn{giver mad}.}
+\dui{dristig}
+\ordsprog{\mwni{Dristigt} vovet er halvt vundet.}
+        {Сме́лость\fn{mod} города́\fn{byer} берёт\fn{indtager}.}
+\ordsprog{Den \mw{drukne} ej, som hænges skal.}
+        {Кому́ сгоре́ть\fn{hænges}, тот не уто́нет\fn{drukner}.
+        \mitem Кому́ суждено́\fn{dømt} опи́ться\fn{drikke (sig ihjel med gift)},
+                тот о́буха\fn{ryg af knivsblad} не бои́тся.}
+% slettet
+%\dui{drøm}
+%\ordsprog{\mwni{Drømme} er dræk, hvo der tror dem er gæk.}
+%        {Куда́ ночь, туда́ и сон.}
+\dui{dråbe}
+\ordsprog{\mwni{Dråben} udhuler stenen.}
+        {Ка́пля\fn{dråbe} и ка́мень долби́т\fn{hugge/bryde} (то́чит\fn{slider ned, skærper}.)
+        \mitem Ка́пля по ка́пле ка́мень долби́т.}
+\dui{due}
+\ordsprog{Stegte \mwni{duer} flyver ikke lige ind i munden.}
+        { Жа́реные го́луби са́ми в рот не летя́т.
+        \mitem Печёные голу́бки не прилетя́т до гу́бки.}
+\dui{dumhed}
+\ordsprog{Mod \mwni{dumheden} kæmper selv guderne forgæves.}
+        {Нет лека́рства\fn{medicin} про́тив глу́пости.
+        % slettet \mitem mitem У кольца́\fn{ring} нет конца́, а у глупца́\fn{fjols} ---  нача́ла.
+        }
+\ordsprog{Hellere \mw{dø} end overgive sig.}
+        {Скоре́е умере́ть, чем сда́ться.}
+\dui{død}
+\ordsprog{\mwni{Døden} skal have en årsag.}
+        {Смерть причи́ну\fn{årsag} найдёт.}
+\dui{død}
+\ordsprog{\mwni{Døden} gør alle lige.}
+        {Смерть всех поравня́ет.}
+\dui{død}
+\ordsprog{\mwni{Døden} står for alles dør.}
+        {Смерть не разбира́ет\fn{vurderer} чи́на\fn{stand, rang},
+        а ведёт равно́\fn{lige, såvel} и крестья́нина\fn{bonde},
+        и дворя́нина\fn{adelsmand}.}
+\dui{død}
+\ordsprog{Ingen urt hjælper mod \mwni{døden}. (Mod døden vokser ingen urt).}
+        {От сме́рти нет зе́лья\fn{urt}.
+        \mitem От сме́рти и под ка́мнем не укро́ешься\fn{gemme sig}.}
+\dui{død}
+\ordsprog{\mwni{Døden} er vis, men timen er uvis.}
+        {Жить наде́йся\fn{håb}, а умира́ть гото́вься\fn{forbered dig}.}
+\dui{døde}
+\ordsprog{Alt der fødes skal \mwni{dødes}.}
+        {
+%         Двух смерте́й не быва́ет, а одно́й не минова́ть\fn{undgå}.
+%         \mitem
+        Без сме́рти не умрёшь.}
+\letter{E}
+\dui{efterråd}
+\ordsprog{\mwni{Efterråd} er gækkeråd.}
+        {А пора́\fn{øjeblikket} ушла́, так ум\fn{forstand} пришёл.
+        \mitem Была́ пора́, так не́ бы́ло ума́.}
+\dui{eg}
+\ordsprog{\mwni{Egen} falder også ved mange \di{hug}.
+        (Mange hug fælder egen.)}
+        {От отного́ уда́ра дуб не ва́лится\fn{falder}.
+        \mitem За оди́н раз де́рево не ва́лится\fn{fældes}.}
+\dui{eksempel}
+\ordsprog{\mwni{Eksemplet} smitter.}
+        {Дурно́й приме́р зарази́телен.
+        \mitem Дурны́е приме́ры зарази́тельны.
+        \mitem Оди́н разу́мный\fn{fornuftig} согреши́т\fn{tage fejl/synde} да мно́гих глу́пых соблазни́т\fn{frister}.}
+\dui{ende}
+\ordsprog{Når \mwni{enden} er god, er alting godt.}
+        {Всё хорошо́, что хорошо́ конча́ется.
+        %slettet \mitem Не до́брого нача́ло, а похва́лен коне́ц.
+        }
+% Slettet for nu
+%\ordsprog{Det gode får altid en tidlig \mw{ende}.}
+%        {Куса́ют и комары́ до поры́.}
+\dui{enighed}
+\ordsprog{\mwni{Enighed} gør stærk. }
+        {В едине́нии си́ла\fn{styrke}.
+        \mitem \rid{согла́сие}{Согла́сие} лу́чше ка́менных стен\fn{vægge}.
+% slettet for nu        \mitem Coгла́сие к хоро́шему приво́дит.
+        }
+\dui{ensomt}
+\ordsprog{\mwni{Ensomt} er ledsomt.}
+        {И в \ri{раю́}\fn{paradis} жить то́шно\fn{kvalmende} одному́.}
+\dui{erfaring}
+\ordsprog{\mwni{Erfaring} er den bedste \di{læremester}.}
+        {\rid{о́пыт}{О́пыт} --- лу́чший \ri{учи́тель}.}
+\dui{erfaring}
+\ordsprog{\mwni{Erfaring} kommer med årene.}
+        {Поживёшь подо́льше\fn{længere}, узна́ешь побо́льше.}
+\ordsprog{Enhver \did{yde}{yder} efter \mw{evne}, enhver nyder efter \di{indsats}.}
+        {От ка́ждого по его́ спосо́бностям\fn{evne}, ка́ждому по его́ труду́\fn{arbejde}.}
+\letter{F}
+\ordsprog{Når man giver (rækker) \mw{fanden} en lillefinger, tager han hele hånden.}
+        {Дай чёрту па́лец, он всю ру́ку отку́сит\fn{bide af} (отхва́тит\fn{rive af}).}
+\ordsprog{Når man taler om \mw{fanden}, er han nærmest.}
+        {О во́лке\fn{ulv} речь, а волк навстре́чь\fn{møde}.}
+\dui{fanden}
+\ordsprog{Man skal ikke male \mwni{fanden} på væggen.}
+        {Не так стра́шен\fn{skrækkelig} чёрт\fn{fanden}, как его́ малю́ют\fn{maler}.
+% slettet for nu \mitem Не шути́ чёртом: из дуби́нки убьёт(вы́палит).
+}
+\dui{fare}
+\ordsprog{\mwni{Far} i mag.}
+        {
+        % slettet for nu Споко́йно, не спеши́.
+        Не торопи́сь\fn{skynd dig}, а наза́д\fn{tilbage} огляди́сь\fn{se dig tilbage}.
+        \mitem Что хорошо́, то не ско́ро.
+        \mitem Tи́ше е́дешь, да́льше бу́дешь.}
+\ordsprog{Hvad \mw{fatter} gør er altid det rigtige.}
+        {Что муженёк\fn{fatter} сде́лает, то и ла́дно\fn{\ru{ла́дный}=god}.
+        \mitem Нача́льник\fn{førstemanden, lederen} всегда́ прав.}
+\ordsprog{Bedre \mw{fattig} med ære end rig med skam.}
+        {Лу́чше бе́дность\fn{fattigdom} да че́стность\fn{renhed}, чем при́быль\fn{profit}.}
+\dui{fattigdom}
+\ordsprog{\mwni{Fattigdom} er ingen last.}
+        {Бе́дность не поро́к.}
+\dui{fattigmand}
+\ordsprog{\mwni{Fattigmand} har hverken slægt eller venner.}
+        {Бе́дному нигде́ ме́ста нет.}
+\ordsprog{Hver mand \mw{fejer} for sin egen dør.}
+        {Мети́ пе́ред свои́м крыльцо́м\fn{overdækket indgangsparti}.
+        \mitem Всяк пряди́\fn{spinder} свою́ пря́жу\fn{garn}.
+        \mitem В чужи́е\fn{fremmede} дела́ не су́йся\fn{stik næsen i}.
+%        \mitem Знай себя́, и бу́дет с тебя́.
+        \mitem Други́х не суди́\fn{døm}, --- на себя́ погляди́. }
+\dui{finde}
+\ordsprog{Den, som søger, \mwni{finder}.}
+        {Тот и сы́щет\fn{\ru{сыска́ть}=søge}, кто и́щет\fn{\ru{сы́скать}=finde}.
+%        \mitem За чем пойдёшь, то и найдёшь.
+}
+\dui{fisk}
+\ordsprog{\mwni{Fisken} begynder først ved \mbox{hovedet} at rådne. }
+        {Ры́ба начина́ет порти́ться\fn{forgå} с головы́.}
+\ordsprog{De store \mw{fisk} æder de små.}
+        {Больша́я ры́ба ма́ленькую целико́м\fn{fuldstændigt} глота́ет\fn{sluger}.}
+\ordsprog{En tør \mw{fisker} dur ikke.}
+        {Не замочи́вшись\fn{bliver våd}, ры́бки не пойма́ешь.}
+\ordsprog{Enhver bærer sin \mw{fjende} i egen barm.}
+        {Всяк сам себе́ враг\fn{fjende}.}
+\ordsprog{En \mw{fjer} kan blive til fem høns.}
+        {Де́лать из му́хи слона́\fn{elefant}.}
+\dui{flid}
+\ordsprog{\mwni{Flid} giver brød, dovenskab død.}
+        {Без труда́ нет плода́\fn{frugt}.}
+\dui{flod}
+\ordsprog{Alle \mwni{floder} løber ud i havet.}
+        {Все реки́ теку́т\fn{flyder} к мо́рю.
+        \mitem Река́ми мо́ре стои́т.}
+\ordsprog{Hellere \mw{fly} end fægte.}
+        {Лу́чше оби́ду\fn{fornærmelse} терпе́ть\fn{udholde}, чем чини́ть\fn{holde rettergang} кому́.}
+\ordsprog{Højt at \mw{flyve}, dybt at falde.}
+        {Кто высоко́\fn{højt} лета́ет бо́льно пада́ет
+        \mitem Кто высоко́ зано́сится\fn{hæver sig}, тому́ не минова́ть\fn{undgå} упа́сть.}
+\dui{folk}
+\ordsprog{Der er forskel på folk.}{Лю́ди (быва́ют) ра́зные.}
+\dui{forbuden}
+\ordsprog{\mwni{Forbuden} frugt smager bedst.}
+        {Запре́тный\fn{forbuden} плод сла́док\fn{sød}.
+        \mitem На запре́тный това́р\fn{vare} весь база́р.}
+\dui{fordærve}
+    \ordsprog{For meget af det gode \mwni{fordærver} alting.
+    (For meget og for lidt fordærver alt.)}
+        {Всё должно́ быть в ме́ру\fn{mål, moderation}.
+        \mitem Хоро́шенького понемно́жку\fn{en lille smule}.}
+\dui{forebyggelse}
+\ordsprog{\mwni{Forebyggelse} er bedre end \di{helbredelse}.}
+        {Береги́сь\fn{foregrib} бед\fn{ulykker}. Пока́ их нет.}
+\ordsprog{Et magert \mw{forlig} er bedre end en fed proces.}
+         {Худо́й мир\fn{fred} лу́чше до́брой дра́ки\fn{kamp} (ссо́ры\fn{skænderi} / бра́ни\fn{overfusning}).}
+\dui{forord}
+\ordsprog{\mwni{Forord} bryder ingen trætte.}
+        {% slettet for nu Угово́р\fn{aftale} доро́же де́нег.
+        Счёт\fn{regnskab} дру́жбы\fn{venskab} не по́ртит\fn{skader}.
+        % \mitem Дава́й(те) для нача́ла внесём я́сность.
+        }
+\dui{forsigtighed}
+\ordsprog{\mwni{Forsigtighed} er en borgmesterdyd.}
+        {Опасе́ние\fn{forsigtighed} полови́на\fn{halve} спасе́нья\fn{redning}.}
+\ordsprog{Hellere \mw{forspørge} sig end forgøre sig.}
+        {Язы́к до Ки́ева доведёт\fn{fører til}.}
+\ordsprog{Det er vanskeligt at agere \mw{forsyn} for andre.}
+        {За други́х реша́ть\fn{beslutte} тру́дно.}
+
+\ordsprog{Man har ikke \mw{fred} længere end ens nabo vil.}
+        {Сосе́д не захо́чет, так и ми́ру не бу́дет.
+        \mitem Хоро́ший сосе́д --- клад\fn{skat}.
+        \mitem С сосе́дом дружи́\fn{gør dig ven}, а забо́р\fn{plankeværk} чини́\fn{vedligehold}.}
+\ordsprog{Bedre uret \mw{fred} end en retfærdig krig.}
+        {Худо́й мир лу́чше до́брой дра́ки (ссо́ры)(бра́ни).}
+\dui{frihed}
+\ordsprog{\mwni{Frihed} er det bedste guld.}
+        {Свобо́да доро́же зо́лота.}
+
+\dui{frygt}
+\ordsprog{\mwni{Frygten} har tusind øjne.}
+        {У стра́ха глаза́ велики́\fn{store}.}
+\dui{frækhed}
+\ordsprog{\mwni{Frækhed} belønnes.}{Сме́лость\fn{dristighed} города́ берёт\fn{indtager}.}
+\ordsprog{Frænde er \mw{frænde} værst.}
+        {Свой своему́ ху́дший враг.}
+\ordsprog{En \mw{fugl} i hånden er bedre end ti på taget.
+  (Hellere en \di{fisk} i hånden end to ved stranden).}
+        {Лу́чше сини́ца\fn{blåmejse} в рука́х, чем жура́вль\fn{trane} в не́бе.
+%     slettet for nu   \mitem Не сули́ журавля́ в не́бе, а дай сини́цу.
+        % slettet for nu Лу́чше кро́шечное\fn{lillebitte} сбереже́ние\fn{spareskilling}, чем больша́я при́быль\fn{profit}.
+        \mitem Лу́чшe оди́н воробе́й\fn{gråspurv} в карма́не, чем деся́ток на кры́ше\fn{taget}.
+        \mitem Сини́ца в рука́х лу́чше соловья́\fn{nattergal} в лесу́.
+
+}
+\dui{fugl}
+\ordsprog{Man kender \mwni{fuglen} på fjerene.}
+        {Ви́дно пти́цу по полёту\fn{flugten}.}
+\ordsprog{Hver \mw{fugl} synger med sit næb.}
+        {У вся́кой пти́зы своя́ пе́сня.
+        \mitem Вся́кая пти́ца свои́ пе́сни поёт.
+        \mitem Всяк поёт как уме́ет.
+        % slettet for nu \mitem Ка́ждый поступа́ет\fn{optræder} по со́бственному\fn{sin egen} усмотре́нию\fn{vurdering}.
+        \mitem Всяк свои́м го́лосом поёт.
+        \mitem Всяк свои́м умо́м живёт.}
+\ordsprog{Det er en dårlig \mw{fugl}, der besudler sin egen rede.}
+        {Пло́ха та пти́ца, кото́рая га́дит в своём гнезде́.}
+\ordsprog{Enhver familie har sit sorte \mw{får}.}
+        {Нет семьи́ без уро́да\fn{vanskabning}.
+% slettet        \mitem Сеья́ не без уро́да
+}
+\letter{G}
+\ordsprog{Man skal ikke \mw{gabe} højere end man kan bide.}
+        {Вы́бирай епанчу́\fn{hvid kappe uden ærmer} по плечу́\fn{skulderen}.}
+\ordsprog{Intet er så \mw{galt}, at det ikke er godt for noget.}
+        {Нет ху́да\fn{onde} без добра́\fn{gode}.
+% slettet        \mitem Не бы́ло бы сча́стья, да несча́стье помогло́\fn{hjalp}.
+}
+%%% \ordsprog{Som de \mw{gamle} sjunge, så kvidre de unge.}{}
+\ordsprog{De \mw{gamle} til \di{råd}, de \di{unge} til \di{dåd}.}
+        {Молодо́й на би́тву\fn{slag}, а ста́рый на ду́му.}
+\ordsprog{Ingen er for \mw{gammel} til at lære.}
+        {Учи́ться\fn{studere} никогда́ не по́здно.}
+\ordsprog{Én \mw{gang} er ingen gang.}
+        {Оди́н раз не в счёт\fn{optælling}.}
+\dui{gemme}
+\ordsprog{Den, som \mwni{gemmer} til natten, gemmer til katten.}
+        {Не сто́ит оставля́ть\fn{гемме} ничего́ на пото́м.
+%%Нет ничего́ та́йного, что не ста́ло бы я́вным.
+}
+\dui{gemt}
+\ordsprog{\mwni{Gemt} er ikke glemt.}
+        {Закры́то, но не забы́то.}
+\ordsprog{Gjort \mw{gerning} står ikke til at ændre.}
+        {Сде́ланного\fn{gjorte} не воро́тишь\fn{gøres om}.}
+\dui{gerrig}
+\ordsprog{Den \mwni{gerrige} er altid fattig.}
+        {Скупо́й\fn{gerrige} бога́ч\fn{rigmand} бедне́е\fn{fattigere}
+        ни́щего\fn{tigger}.}
+\dui{gerrighed}
+% \ordsprog{\mwni{Gerrighed} og øjet mættes aldrig.}
+%         {У скупо́го, что бо́льше
+%          де́нег, то бо́льше го́ря\fn{sorg}.\fn{Samme betydning?}}
+\ordsprog{Skal der være \mw{gilde}, så lad der være gilde.}
+        {Кути́ть\fn{svirre} - так кути́ть.
+       % slettet for nu. \mitem Де́лать - так де́лать как сле́дует\fn{hør og bør}.
+        \mitem Раз пошла́ така́я пья́нка\fn{brandert}.
+        \mitem Режь\fn{skær} после́дний\fn{sidste} огуре́ц\fn{agurk}.
+       }
+\dui{glæde}
+\ordsprog{Når \mwni{glæden} er i stuen, er sorgen i forstuen.}
+         {За ра́достью го́ре\fn{sorg} по пята́м\fn{i hælene} хо́дит.}
+\ordsprog{En liden \mw{gnist} kan antænde en hel skov.}
+        {Ма́ла и́скра\fn{gnist} города́ пожига́ет\fn{antænder}.
+        \mitem От де́нежной све́чки\fn{kjærte} Москва́ сгоре́ла\fn{brændte}.}
+\ordsprog{Af liden \mw{gnist} vorder ofte stor ild.}
+        {От ма́лой и́скры, да большо́й пожа́р.
+%        \mitem От ма́лой и́скры сыр-бо́р загоре́лся
+%                (загора́ется).
+                }
+\ordsprog{Den, der graver en \mw{grav} for andre, falder selv i den.}
+        {Не рой\fn{grav} друго́му я́му\fn{hul/grav}, сам в неё попадёшь\fn{falder i}.
+        \mitem Кто друго́му я́му ро́ет, сам в неё попадёт.}
+\ordsprog{Man skal ikke save den \mw{gren} over, som man sidder på.}
+        {Не руби́\fn{skær} сук\fn{gren}, на кото́ром сиди́шь.}
+\dui{smed}
+\ordsprog{Hvad der kurerer en \mw{grovsmed}, \mbox{slår}
+          en \di{skrædder} ihjel.}
+        {Что поле́зно\fn{nyttigt} одному́, то вре́дно\fn{skadeligt} друго́му.
+        \mitem Что ру́сскому здоро́во, то не́мцу смерть.
+        \mitem Что одному́ здоро́во, друго́му смерть.}
+\dui{græs}
+\ordsprog{Mens \mwni{græsset} gror, dør horsemor.}
+        {Пока́ трава́ вы́растет, кобы́ла\fn{hoppe} \mbox{сдо́хнет}.
+%        \mitem Пока́ со́лнце взойдёт, роса́ о́чи вы́ест.
+}
+\dui{græsset}
+\ordsprog{\mwni{Græsset} er altid grønnere på den anden side af hækken (Naboens \mw{høne} lægger altid større æg).}
+         {
+         В чужо́м дворе́\fn{\ru{двор} = gårdsplads} ку́рица гу́сем\fn{\ru{гусь} = gås} ка́жется.
+         \mitem Зави́стливый\fn{misundelig} по чужо́му\fn{andens}
+         сча́стью\fn{lykke} со́хнет\fn{visner}.}
+\dui{gråspurv}
+\ordsprog{Man skal ikke skyde \mwni{gråspurve} med kanoner.}
+        {Не стреля́й\fn{skyd} из пу́шки\fn{kanon} по воробья́м\fn{spurve}.}
+\dui{gud}
+\ordsprog{Hjælp dig selv, så hjælper dig \mwni{Gud}.}
+        {Бе́режного\fn{forsigtig} Бог бережёт\fn{beskytter}.
+        \mitem Бог-то бог, да не будь сам плох.
+%        \mitem На Бо́га наде́йся\fn{sæt lid til},
+%                а сам не проша́й (лени́сь).
+                }
+\ordsprog{Det er ikke alt \mw{guld}, der glimrer.}
+        {Не всё то \ri{зо́лото}, что блести́т.}
+\dui{guld}
+\ordsprog{\mwni{Guld} skinner, omend det ligger i skarn.}
+        {Зо́лото и в грязи́ блести́т.}
+\dui{guldnøgle}
+\ordsprog{\mwni{Guldnøgle} lukker alle døre op.}
+        {Зо́лото не бог, а ми́лует\fn{frelser}.}
+\dui{gæld}
+\ordsprog{\mwni{Gæld} er for at betales.}
+        {Долг платежо́м кра́сен\fn{smuk}.}
+\ordsprog{Ubuden \mw{gæst} hører ej til fest.}
+         {% Незва́ные \ri{го́сти} гло́жут'\fn{afgnaver} и ко́сти\fn{knogler}.
+        Незва́ный гость ху́же\fn{værre} тата́рина\fn{tatar}.}
+\dui{gæst}
+\ordsprog{Når \mwni{gæsten} er kærest, skal han takke af.}
+        {Пора́ гостя́м и честь\fn{ære, høflighed} знать.}
+\ordsprog{En \mw{gæst} og en fisk lugter ilde den tredje dag.}
+        {Гость до трёх дней.}
+\ordsprog{Det er en kær \mw{gæst}, som sjældent kommer.}
+        {
+        Ре́дкое свида́ние\fn{møde}, прия́тный гость.
+        \mitem Хоро́ш гость, ко́ли\fn{hvis, dersom} ре́дко хо́дит.
+        \mitem Мил гость, что недо́лго гости́т.
+        }
+\dui{gø}
+\ordsprog{Den hund, der \mwni{gøer}, bider ikke.}
+        {Соба́ка, кото́рая ла́ет, не куса́ет.
+        \mitem Не бо́йся соба́ки, что
+        ла́ет (а бо́йся той, что молчи́т да
+        хвосто́м\fn{halen} виля́ет\fn{logrer}).}
+\ordsprog{Hvad du ikke vil, man skal \mw{gøre} mod dig,
+        det skal du ikke gøre mod andre.}
+        {Чего́ в друго́м не лю́бишь, того́ и сам не
+        де́лай.}
+\letter{H}
+\dui{handle}
+\ordsprog{Hvor der \mwni{handles}, der spildes.}
+        {Лес ру́бят\fn{fælde}, ще́пки\fn{spåner} летя́т.
+        %\mitem Незамочи́вшись, ры́бки не пойма́ешь.
+        %\mitem Не чёрт, не мят --- не бу́дет кала́ч\fn{hvedebrød}.
+        }
+\dui{hastværk}
+\ordsprog{\mwni{Hastværk} er \di{lastværk}.}
+        {Ти́ше\fn{roligere} е́дешь, да́льше бу́дешь.}
+\dui{held}
+\ordsprog{\mwni{Heldet} følger de tossede.}
+        {Дура́к спит\fn{sover}, а сча́стье в голова́х сиди́т (стои́т).}
+\dui{held}
+\ordsprog{\mwni{Held} i spil, uheld i kærlighed.}
+        {Счастли́в игро́й, да несчастли́в жено́й.
+        \mitem Кому́ везёт в игре́ (в ка́ртах), тому́ не везёт в любви́.}
+\ordsprog{Vejen til \mw{helvede} er brolagt med gode forsætter.}
+        {Доро́га в ад\fn{helvede} вы́мощена\fn{brolagt}
+        благи́ми\fn{velmenende} наме́ренями\fn{forsætter}.}
+\dui{hensigt}
+\ordsprog{\mwni{Hensigten} helliger midlet.}
+        {Цель\fn{målet} опра́вдывает\fn{retfærdiggør} сре́дства\fn{midler}.}
+\ordsprog{Det er svært at være \mw{her} og der og alle vegne.}
+        {Всю́ду\fn{alle steder hen} не поспе́ешь\fn{når}.}
+\dui{herre}
+\ordsprog{Som \mwni{herren} er, så følge ham hans svende.}
+        {
+        Како́в царь, тако́в наро́д.
+        \mitem Како́в поп\fn{præst}, тако́в и прихо́д\fn{sogn}.
+        \mitem Како́в ба́тюшка\fn{fader}, тако́в и сын.
+        \mitem Оте́ц рыба́к\fn{fisk} - и де́ти в во́ду
+        смо́трят\fn{kigger}.
+        \mitem Како́в хан\fn{kahn}, такова́ орда́\fn{horde}
+        }
+\dui{herre}
+\ordsprog{Ingen kan tjene to \mwni{herrer}.}
+        {На двух госпо́д служи́ть\fn{tjene}, ни одному́ не угоди́ть\fn{gøre tilpas}.}
+\ordsprog{\mw{Herren} gav, Herren tog.}
+        {Бог дал, Бог и взял.}
+\ordsprog{Fra en høj \mw{hest} falder man dybt.}
+        {
+        Высоко́ по́днял, да ни́зко опусти́л.
+        \mitem С высо́кой ло́шади больне́е\fn{desto mere smertefuldt} па́дать.
+        }
+ % \dui{hest}
+ %\ordsprog{Enten skal man køre \mwni{hest\-e\-ne} eller give tøjlerne fra
+ %        sig.}
+ %        {Взя́лся за гуж, не говори́, что не дюж.}
+\ordsprog{Man skal ikke skue given \mw{hest} i munde.}
+        {Дарёному(даро́вому) коню́ в зу́бы не смо́трят.}
+\ordsprog{En \mw{hest} kan falde på fire ben, (hvorfor så ikke et
+        menneske på to?)}
+        {Конь о четырёх нога́х, да и тот спотыка́ется\fn{snuble}.}
+% slettet \ordsprog{Mands vilje, mands \mw{himmerige}.}
+%        {Своя́ во́ля, ли́бо\fn{enten ... eller} рай, ли́бо ад.
+%        \mitem Охо́та\fn{?} пу́ще (стра́шней) нево́ли.
+%        }
+\ordsprog{Man kan tvinge hesten til brønden, men man kan ikke tvinge den til at drikke.}{Не гоня́й\fn{\ru{гоня́ть}=drive} ло́шадь к воде́, е́сли ей пить не хо́чется.}
+\ordsprog{Øst, vest, \mw{hjemme} bedst. (Hvem der vil ligge godt og sidde godt, må blive \mw{hjemme}).}
+        {В гостя́х хорошо́, а до́ма лу́чше.
+        \mitem Своя́ ха́тка\fn{hytte} --- родна́я ма́тка\fn{skød, kære mor}.
+        \mitem Своя́ хи́жина\fn{hytte} лу́чше чужи́х\fn{fremmedes} пала́т\fn{palads}.
+        \mitem Дон, Дон, а лу́чше дом.}
+\dui{hjerte}
+\ordsprog{Hvad \mwni{hjertet} er fuldt af, løber munden over med.
+(Af hjertets overflødighed taler munden.)}
+        {От избы́тка\fn{overskud} се́рдца, уста́\fn{munden} глаго́лют\fn{taler}.
+        \mitem У кого́ что боли́т\fn{lider}, тот о том и говори́т.}
+\ordsprog{Hvor der er \mw{hjerterum}, er der også husrum.}
+        {В тесноте́\fn{tranghed, smalhals}, да не в оби́де\fn{fornærmelse}.
+        \mitem Те́сно\fn{snævert}, но ую́тно\fn{hyggeligt}.
+        }
+\ordsprog{Det sletteste \mw{hjul} på vognen skriger mest.}
+        {Худо́е колесо́\fn{hjul} пу́ще\fn{mere} скрипи́т\fn{knirker}.}
+\ordsprog{Hurtig \mw{hjælp} er dobbelt hjælp.}
+        {Даю́ший во́время, даёт вдво́е.
+        \mitem Кто ско́ро помо́г, тот два́жды помо́г.}
+\dui{honning}
+\ordsprog{\mwni{Honning} i munden, galde i hjer\-tet.}
+        {На языке́ мёд, а в се́рдце лёд\fn{is}.}
+%\ordsprog{Hvor \mw{honning} er, der samles (el. sankes) \di{fluer}.}
+%        {Где мёд, там и му́хи.
+%        \mitem Будь лишь мёд, мух мно́го нальнёт\fn{samles?}.}
+\dui{hoved}
+\ordsprog{Så mange \mwni{hoveder}, så mange \di{sind}.}
+        {Ско́лько голо́в, сто́лько умо́в.}
+\dui{hoved}
+\ordsprog{Hvad man ikke har i \mwni{hovedet}, må man have i benene.}
+        {Дурна́я голова́ нога́м поко́я\fn{ro} не даёт.
+        \mitem За глу́пой голово́й и нога́м не поко́й.}
+\dui{hovmod}
+\ordsprog{\mwni{Hovmod} står for fald.}
+        {Высоко́ лета́ешь, да ни́зко сади́шься\fn{sætte sig}.
+        \mitem Не надува́йся\fn{blæse sig op}, ло́пнешь\fn{revner}.
+        \mitem Кто высоко́ зано́сится\fn{flyver}, тому́ не минова́ть\fn{undgå}
+                упа́сть.
+        \mitem Кто высоко́ лета́ет, тот ни́зко па́дает.
+        \mitem Горды́ня\fn{hovmod} до добра́ не доведёт\fn{fører.}}
+\dui{huld}
+\ordsprog{\mwni{Huld} er mere værd end \di{guld}.}
+        {Здоро́вье --- то же зо́лото.}
+\dui{hund}
+ %\ordsprog{Mange \mwni{hunde} er \did{hare}{harens} død.}
+ %       {Си́ла\fn{styrke} соло́му\fn{halm} ло́мит\fn{?}.}
+ \dui{hund}
+ \ordsprog{Man kan ikke skue \mwni{hunden} på hårene.}
+         {Вне́шность\fn{udseende} --- обма́нчива\fn{vildledende}.}
+\ordsprog{Død \mw{hund} bider ikke.}
+        {Мёртвая соба́ка не куса́ет.}
+\dui{hund}
+\ordsprog{Man skal ikke lære gamle \mwni{hunde} nye kunster.}
+        {Не учи́ ры́бу пла́вать.
+        \mitem Не учи́ учёного\fn{lærte}.}
+\dui{hund}
+\ordsprog{Tiende \mwni{hunde} bider værst.}
+        {Молчá --- соба́ка исподтишка́\fn{i det skjulte} хвата́ет\fn{snapper}.}
+\dui{hund}
+\ordsprog{Hvo, der går i seng med \mwni{hunde}, han står op med
+        lopper.}
+        {С соба́кой ля́жешь, с блоха́ми\fn{lopper} ста́нешь.
+        \mitem С кем поведёшься\fn{\ru{повести́сь}=blive ven med}, от того́ и наберёться\fn{\ru{набра́ться}=samle op}.}
+\dui{hus}
+\ordsprog{Andre \mwni{huse}, andre sæder.}
+        {Что го́род, то но́ров\fn{skik}, что дере́вня, то обы́чай\fn{vane}.}
+%        \mitem Нет таки́х трав, что́бы знать чужо́й\fn{fremmed} нрав\fn{gemyt sæder/skik}.
+\ordsprog{Lykkeligst at \mw{hvile} på er fuldendte gerning.}
+        {По́сле трудо́в сла́док поко́й\fn{hvile}.}
+\dui{hæler}
+\ordsprog{\mwni{Hæleren} er lige så god som stjæleren.}
+        {
+        % Во́ру\fn{tyv} потака́ть\fn{ser gennem fingre med, dækker over}, что самому́ ворова́ть.
+        Ута́йщик\fn{hæler} - тот же вор.
+        \mitem Вор по во́ре след кро́ет\fn{\ru{крыть}=dække}.
+        }
+\dui{høflighed}
+\ordsprog{\mwni{Høflighed} koster ingen penge.}{
+Ве́жливость\fn{høflighed} нам ничего́ не сто́ит (но це́нится\fn{værdsat} до́рого).
+% slettet for nu \mitem Честь безче́стья лу́чше.
+}
+ %\ordsprog{Høg over \mw{høg}.}
+ %        {Нашла́ коса́ на ка́мень.
+ %        \mitem Ты концо́м, а он кольцо́м.}
+\ordsprog{Blind \mw{høne} finder også et korn.}
+        {И слепа́я ку́рица мо́жет найти́
+                зёрнышко (зерно́).}
+\ordsprog{Kloge \mw{høns} gør også i nælderne.}
+        {На вся́кого мудреца́\fn{klog mand} дово́льно\fn{ret så meget}
+        простоты́\fn{enfoldighed}.
+        \mitem И на стару́ху быва́ет прору́ха.
+        \mitem И на мо́лодца\fn{ung mand} быва́ет опло́х\fn{fejl} (опло́шность).
+}
+\ordsprog{Den, der ikke vil \mw{høre}, må føle.}
+        {Не послу́шаешься, попла́тишься\fn{\ru{плати́ться}=betale}.
+        \mitem Кого́ слова́ не беру́т\fn{tager},
+        с того́ шку́ру\fn{pelsen} деру́т\fn{\ru{драть}=flå}.}
+\dui{håb}
+\ordsprog{\mwni{Håbet} er lysegrønt.}
+        {Наде́жда\fn{håb} умира́ет\fn{dør} после́дней.
+        \mitem Сча́стье\fn{lykke} ско́ро\fn{snart} покида́ет\fn{forlader}, а до́брая
+                наде́жда --- никогда́.}
+\ordsprog{Den ene \mw{hånd} \di{vasker} den anden.}
+        {Рука́ ру́ку мо́ет.
+                (И о́бе бе́лы живу́т)
+ %        \mitem Плут плута́ кро́ет.
+}
+\ordsprog{Mange \mw{håndværk} fordærver \di{mesteren}.}
+        {
+        % slettet for nu От ску́ки ма́стер на все ру́ки.
+        Кто за всё хвата́ется\fn{tager fat på, griber}, тот ничего́ не сде́лает.}
+\dui{hård}
+\ordsprog{\mwni{Hårdt} mod hårdt.}
+        {Нашла́ коса́\fn{le} на ка́мень\fn{sten}.
+        \mitem Ты концо́м\fn{ende?}, а он кольцо́м\fn{ring}.}
+\letter{I}
+\ordsprog{Når der går \mw{ild} i gamle huse, brænder de ned til
+grunden.}
+        {Седина́\fn{grå hår} в бо́роду\fn{skægget}, а бес\fn{fanden} в ребро́\fn{ribben}.}
+\dui{ild}
+\ordsprog{Man skal ikke lege med \mwni{ilden}.}
+        {Не игра́й с огнём.}
+\letter{J}
+\dui{jage}
+\ordsprog{Den, som \mwni{jager} to \di{harer}, får ingen.}
+        {За двумя́ за́йцами\fn{harer} пого́нишься\fn{jager}, ни одного́ не пойма́ешь.
+        \mitem Двух за́йцев гоня́ть\fn{jage}, ни одного́ не пойма́ть}
+\dui{jern}
+\ordsprog{Man skal smede, mens \mwni{jernet} er varmt.}
+        {Куй\fn{smed} желе́зо, пока́ горячо́\fn{hedt}.}
+\ordsprog{Af \mw{jord} er du kommet, til jord skal du blive.}
+        {Из земли́ вы́шел и в зе́млю оты́деши\fn{?}.}
+\ordsprog{God \mw{jæger} får altid bytte.}
+        {На ловца́\fn{fanger} и зверь\fn{vildt dyr} бежи́т\fn{løber}.}
+\letter{K}
+\ordsprog{Man skal ikke skære alle over en \mw{kam}.}
+        {Нельзя́ стричь\fn{skære} всех под одну́
+        гребёнку\fn{kam}.
+        \mitem Нельзя́ ста́вить\fn{stille} всех на одну́ до́ску\fn{bræt}.
+        % slettet for nu \mitem Не сле́дует вали́ть\fn{kaste} всё в одну́ ку́чу\fn{bunke}.
+        %\mitem В одну́ пётельку всех пуго́вок
+        %       (пу́говиц) не у\-стег\-нёшь.
+        %\mitem Не всё терь на свой арши́н.
+        }
+\ordsprog{Der er brådne \mw{kar} i alle lande.}
+        {В семье́ не без уро́да\fn{vandskabning}.
+               }
+\dui{kat}
+\ordsprog{Om \di{natten} (i \di{mørke}) er alle \mwni{katte} grå.}
+        {Но́чью все ко́шки се́ры (чёрны).
+        \mitem Но́чью и уро́д\fn{vandskabning} краса́вец.}
+\dui{kat}
+\ordsprog{Gale \mwni{katte} får revet skind.}
+        {На задо́рном\fn{kåd} буя́не\fn{ballademager} век\fn{evighed} шку́ра\fn{huden} в изъя́не\fn{mangel/defekt}.}
+\dui{kat}
+\ordsprog{Når \mwni{katten} er ude, spiller musene på bordet.}
+        {Когда́ нет кота́ в дому́, игра́ют мы́шки по столу́.
+        \mitem Кота́ до́ма нет, мыша́м раздо́лье\fn{leger}].
+    % slettet for nu   \mitem Ко́шки грызу́тся\fn{kæmper indbyrdes}, мыша́м раздо́лье.
+        }
+\ordsprog{Sovende \mw{kat} fanger ingen mus.}
+        {Еда́ не достаётся\fn{opnås} лёжа\fn{liggende}.
+        \mitem Лёжа хле́ба/пи́щи\fn{mad} не добу́дешь.}
+ %\ordsprog{En \mw{kat} må se på en konge.}
+ %        {И ко́шка мо́жет смотре́ть на короля́.
+ %        \mitem Ка́здый челове́к до́лжен облада́ть чу́вством
+ %                со́бственного досто́инства.}
+\dui{kejser}
+\ordsprog{Hvor intet er, har \mwni{kejseren} tabt sin ret.}
+        {На нет и суда́\fn{domstol} нет}
+\dui{kende}
+\ordsprog{\mwni{Kend} dig selv!}
+        {Познава́й себя́!}
+\ordsprog{Man skal ikke spise \mw{kirsebær} med de store (med herrebørn).}
+        {Не ешь с больши́ми ви́шен.
+ %        \mitem Не в свои́ са́ни не сади́сь.
+ %        \mitem С боя́рами не ешь ви́шен (костьми́ закида́ют).
+ }
+\dui{klog}
+\ordsprog{Den \mwni{kloge} mand tisser ikke mod vinden.}
+        {Про́тив ве́тра не наду́ешься\fn{blæse}.}
+\dui{klog}
+\ordsprog{Den \mwni{kloge} giver efter.}
+        {У́мный уступа́ет\fn{giver efter}.
+        \mitem Смирне́е\fn{fredeligste} --- при́быльнее\fn{får mest ud af det}.}
+\dui{klokke}
+\ordsprog{Små \mwni{klokker} har også lyd.}
+        {Невели́к\fn{lille} сверчо́к\fn{fårekylling}, да гро́мно поёт.}
+\dui{klæder}
+\ordsprog{\mwni{Klæder} skaber folk.}
+        {Оде́жда кра́сит челове́ка.
+        %\mitem Тот и умён, кто бога́то наряжён.
+        }
+\dui{klæder}
+\ordsprog{\mwni{Klæder} skaber ikke folk.}
+        {Не всяк мона́х\fn{munk}, на ком клобу́к\fn{munkekåbe}.
+        \mitem Свинья́ и в золото́м оше́йнике\fn{halskæde} --- свинья́.}
+%%\dui{knogle}
+%%\ordsprog{For dem der kommer for sent er der kun \mwni{knoglerne}.}{}
+ \dui{ko}
+ \ordsprog{Der er flere røde \mwni{køer} end \di{præstens}.}
+         {
+         Свет не кли́ном\fn{kile} сошёлся\fn{\ru{сойти́сь}=komme sammen, mødes} (на э́том).
+           %Э́то к вам (к тебе́) не отно́сится.
+           %        \mitem Ты тут не при чём.
+         %(Э́того) хоть пруд пру́ди.
+         }
+\ordsprog{Sort \mw{ko} giver hvid mælk.}
+        {Чёрная коро́ва, да бе́лое молоко́.}
+\dui{kok}
+\ordsprog{For mange \mwni{kokke} fordærver maden.}
+        {Де́сять поваро́в то́лько щи пересливaют\fn{oversalter}.
+        \mitem У семи́\fn{syv} ня́нeк\fn{barnepiger}, дитя́\fn{børn} без гла́зу.}
+\dui{komme}
+\ordsprog{Hvad der \mwni{kommer} let går let.}
+        {Что легко́ на́жито\fn{tjene/samle},
+        то легко́ и про́жито\fn{opbrugt, forbrugt}.}
+\ordsprog{Kan du vente, kan du blive \mw{konge} af Sverige.}
+        {Терпе́ние и труд всё перетру́т\fn{\ru{тереть} "overkomme", egl. gnide hul på, gennempudse}.}
+\ordsprog{Mangen har gode \mw{kort} på hånden, vidste han blot at
+                spille dem.}
+        {У мно́гих был тала́нт, е́сли бы
+                зна́ли, как им по́льзоваться.}
+\dui{kost}
+\ordsprog{Nye \mwni{koste} fejer bedst.}
+        {Но́вая метла́\fn{kost} чи́сто\fn{rent}/(хорошо́) метёт\fn{fejer}.}
+\dui{krage}
+\ordsprog{\mwni{Krage} søger mage.}
+        {
+        % slttet for nu Орёл\fn{ørn} орла́ плоди́т\fn{avler}, а сова́\fn{ugle} сову́ роди́т\fn{føder}.
+        Рыба́к\fn{fisker} ви́дит издалека́\fn{fra lang afstand} рыбака́.}
+\dui{krukke}
+\ordsprog{\mwni{Krukken} går så længe til vands, at den kommer
+        hankeløs hjem.}
+        {Пова́дился\fn{lagde sig vane til} кувши́и\fn{krukke} по́ воду ходи́ть\fn{gå på vandet}, там ему́ и
+        го́лову сложи́ть\fn{\ru{сложи́ть го́лову}=give sit liv, falde}.}
+\dui{krukke}
+\ordsprog{Små \mwni{krukker} har også ører.}
+        {И у стен\fn{væg} есть у́ши.}
+\ordsprog{Når \mw{krybben} er tom, bides hest\-e\-ne.}
+        {У пусто́го коры́та\fn{krybbe, egtl. kar} и ко́ни\fn{hest} грызу́тся\fn{bides}.}
+\ordsprog{Man må \mw{krybe} før man kan gå.}
+        {Всё даётся\fn{gives} не сра́зу.
+       % \mitem Мастерства́ за плеча́ми не но́сят.
+       }
+%  %\ordsprog{Man kan lige så godt springe som \mw{krybe} i det.}
+%  %      {Не мытьём, так ка́таньем.}
+\dui{kundskab}
+\ordsprog{\mwni{Kundskab} er \di{magt}}
+        {Зна́ние --- си́ла.}
+\dui{kunne}
+\ordsprog{Man \mwni{kan} hvad man \di{vil}.}
+        {Что хочу́, то и могу́.
+        \mitem Где хоте́ние\fn{vilje}, там и уме́нье\fn{forstand/evne}.}
+\ordsprog{Ingen list som \mw{kvindelist} / Altid har kvinder svig
+        under skød.}
+        {Нет в лесу́ сто́лько повёрток\fn{drejning, sving} ско́лько у ба́бы увёрток\fn{udflugter}.}
+\dui{kvinder}
+\ordsprog{\mwni{Kvinder} har langt hår og kort forstand (Kvinder har korte sind under lange klæder).}
+        {У ба́бы во́лос до́лог, да ум\fn{forstand} ко́роток.}
+\ordsprog{Gammel \mw{kærlighed} ruster ikke.}
+        {Ста́рая любо́вь не ржаве́ет.
+        \mitem Ста́рая любо́вь до́льго по́мнится\fn{huskes}.}
+\ordsprog{I krig og kærlighed gælder alle kneb.}{На войне́\fn{krig} и в любви́ все сре́дства\fn{midler} хороши́.}
+\dui{kærlighed}
+\ordsprog{\mwni{Kærlighed} gør blind.}
+        {Любо́вь --- слепа́\fn{blind} %(поведёт до беды́ и попа́).
+        }
+\dui{kærlighed}
+\ordsprog{\mwni{Kærlighed} overvinder alt.}
+        {Любо́вь всё побежда́ет\fn{vinder}.
+        \mitem Любо́вь за де́ньги не ку́пишь.}
+\letter{L}
+\dui{lad}
+\ordsprog{\mwni{Lad} er den der \di{magsvejr} laster.}
+         {Лени́вец\fn{den dovne} и хоро́шую пого́ду\fn{vejr}
+         брани́т\fn{forbander}.}
+\ordsprog{Livet er ikke lutter \mw{lagkage}.}
+         {
+        Жизнь --- не слошно́й\fn{lutter} пра́здник\fn{festdag/helligdag}.
+        \mitem Не всё коту́ ма́сленица\fn{det søde liv}, придёт и вели́кий пост\fn{faste}.
+%        \mitem Жизнь --- прожи́ть --- не по́ле перейти́.
+%        \mitem Жизнь нелёгкая.
+}
+\dui{lastværk}\dui{hastværk}
+\ordsprog{Hastværk er \mwni{lastværk}.}
+        {Ти́ше е́дешь да́льше бу́дешь.
+        \mitem Поспеши́шь\fn{skynd dig} --- люде́й насмеши́шь\fn{grine ad dig}.}
+\ordsprog{For megen \mw{latter} ender med gråd.}
+              {Кто в суббо́ту смеётся, в воскре́сенье пла́кать бу́дет.}
+\dui{laurbær}
+\ordsprog{Man bør ikke hvile på sine \mwni{laurbær}.}
+              {Не сле́дует почива́ть\fn{hvile} на ла́врах.}
+\dui{lediggang}
+\ordsprog{\mwni{Lediggang} er roden til alt ondt.}
+        {Лень\fn{dovenskab} --- мать всех поро́ков\fn{laster}.
+        \mitem Пра́здность\fn{lediggang} - мать поро́ков.
+        \mitem На безде́льи\fn{lediggang} дурь\fn{dumhed} в го́лову ле́зет\fn{kryber}.}
+\dui{leg}
+\ordsprog{Man skal holde op mens \mwni{legen} er god.}
+        {Шути́\fn{spøg} до тех пор\fn{indtil nu}, пока́ кра́ска\fn{farve} в лицо́ не войдёт.
+%        \mitem Останови́ться\fn{stands} во́время.
+        \mitem Ешь, не доеда́й, пей, не допива́й.}
+\dui{lejlighed}
+\ordsprog{\mwni{Lejlighed} gør tyve.}
+         {Пло́хо не клади́\fn{\ru{класть}=anbringe (tingene) dårligt}, во́ра\fn{tyv} в грех\fn{synd} не вводи́\fn{før}.}
+% slettet \ordsprog{Grib \mw{lejlighed}
+%               fortil, hvor den har hår,
+%               og ej bagtil, hvor den er skaldet.}
+%               {Со́лнышко\fn{solen} нас не дожида́ется\fn{venter}.
+%        %\mitem Клюёт, так не зева́й.
+%        }
+\ordsprog{Med \mw{lempe} når man længst.}
+         {Мёдом\fn{honning} бо́льше мух\fn{fluer} нало́вишь\fn{fanger}.}
+\ordsprog{Den \mw{ler} bedst, som ler sidst. }
+        {Хорошо́ смеётся тот, кто смеётся после́дним.}
+\dui{leve}
+\ordsprog{Den der \mwni{lever}, får at se.}{Поживём --- уви́дим.}
+\dui{leve}
+\ordsprog{Man skal spise for at \mwni{leve}, ikke leve for at spise}
+{мы еди́м, что́бы жить, а не живём, что́бы есть.}
+\ordsprog{Hellere \mw{revne} end \di{levne}.}
+        {Лу́чше перее́сть\fn{overspise}, чем недое́сть\fn{ikke spise op}.}
+\dui{lidt}
+\ordsprog{\mwni{Lidt} er bedre end intet.}
+        {Лу́чше немно́го, чем ничего́.
+        \mitem Ма́лый бары́ш\fn{profit} лу́чше большо́го накла́да\fn{tab}.
+        \mitem Лу́чше ма́ленькая ры́бка,
+        чем большо́й тарака́н\fn{kakerlak}.}
+\dui{lidt}
+\ordsprog{\mwni{Lidt} har også ret.}
+         {
+         % slettet Хоть\fn{på trods af} грош\fn{2 kopek}, да свой.
+         Лу́чше немно́го, чем ничего́
+         }
+\ordsprog{Lige for \mw{lige}, hvis \di{venskab} skal holdes.}
+         {Услу́га\fn{tjeneste} за услу́гу.
+         \mitem О́ко за о́ко, зуб за зуб.
+        \mitem Ча́ще\fn{oftere} счёт\fn{regnskab}, до́льше\fn{længere} (крепче) дру́жба\fn{venskab}.}
+\ordsprog{Som man reder, så \mw{ligger} man.}
+        {Как посте́лешь, так и поспи́шь\fn{sover}.
+        \mitem Что посе́ешь\fn{sår}, то и пожнёшь\fn{høste}.
+        \mitem Какова́ посте́ль\fn{seng}, тако́в и сон\fn{søvn}.}
+\ordsprog{Man skal helst lade sit skidne \mw{linned} vaske hjemme.}
+              {Сор из избы́ не выноси́ (вымета́й).}
+\dui{livet}
+\ordsprog{\mwni{Livet} er kort, \di{kunsten} er lang.}
+{Жизнь коротка́, \ri{иску́сство} ве́чно.\fn{evig}.}
+\ordsprog{Lov er \mw{lov} og lov skal holdes.}
+              {
+              % Зако́н\fn{lov} сле́дует\fn{bør} соблюда́ть\fn{følge}.
+              Зако́н\fn{lov} есть зако́н.
+              }
+\dui{lov}
+\ordsprog{\mwni{Loven} er \di{ærlig}, holden
+             besværlig / En ting er at \di{love}, en anden at \di{holde}.}
+        {Одно́ де́ло обеща́ть\fn{love}, друго́е --- выполня́ть\fn{holde}.
+\mitem Обеща́ть и сло́во сдержа́ть\fn{holde}, как не́бо\fn{himmel} и земля́\fn{jord}.
+        % Slettet
+  %%        \mitem Не да́вши сло́ва --- крепи́сь\fn{fæstne} --- а
+  %%               да́вши держи́сь.
+        \mitem От сло́ва до де́ла --- сто перего́нов\fn{\ru{перего́н}=jernbanestrækning (et godt stykke vej)}.
+        \mitem Обеща́нного три го́да ждут.
+        \mitem Мно́го сули́т\fn{lover} да ма́ло даёт\fn{giver}.}
+\ordsprog{Der skal skarp \mw{lud} til skurvede hoveder./Med ondt skal ondt fordrives.}
+        {
+        % slettet По соба́ке и па́лка\fn{stav}.
+        Клин\fn{kile} кли́ном вышиба́ют\fn{slår ud}.}
+\dui{luft}
+\ordsprog{\di{Gud} mildner \mwni{luften} for de klip\-pe\-de \di{får}.}
+        {Бог ми́лостив\fn{nådig}.
+        % slettet \mitem Одно́ потеря́ешь\fn{mister}, друго́е найдёшь\fn{finder}.
+         \mitem Бог не без ми́лости\fn{nåde}, каза́к не без сча́стья\fn{lykke}.}
+\dui{lykke}
+\ordsprog{Enhver er sin egen \mwni{lykkes} smed.}
+        {Ка́ждый кузне́ц\fn{smed} своего́ сча́стья.
+        \mitem Всяк своего́ сча́стья кузне́ц.}
+\dui{lykke}
+\ordsprog{Den ene har \mwni{lykken}, den anden har krykken.}
+  {Кому́ пироги́\fn{pirog} да пы́шки\fn{boller}, а кому́ синяки́
+  \fn{blå mærker} да ши́шки\fn{buler}.
+        % \mitem И то сча́стье, что ино́му вёдро\fn{godt vejr}, ино́му несча́стье.
+        }
+\dui{lykke}
+\ordsprog{\mwni{Lykken} står den kække bi.}
+        {Уда́ча\fn{lykken} нахра́п\fn{frækhed, dristighed} лю́бит.
+        \mitem Судьба́\fn{skæbnen} покрови́тельствует\fn{beskytter} хра́брым\fn{modig}.
+        \mitem Сча́стье сопу́тствует\fn{følger, ledsager} хра́брым.
+% slettet        \mitem (Судьба́) сме́лым бог владе́ет\fn{ejer?}.
+        \mitem Сме́лость\fn{mod} города́ берёт\fn{indtager}.
+% slettet        \mitem Сме́лого пу́ля\fn{kugle} бои́тся.
+        \mitem Хра́брому сопу́тствует уда́ча.
+}
+\dui{lykke}
+\ordsprog{\mwni{Lykken} er altid der, hvor du ikke er.}
+        {Везде́ хорошо́, где нас нет.}
+\dui{lykke}
+\ordsprog{\mwni{Lykken} er alle dårers formynder.}
+       {
+       % slettet Глу́пому сча́стье, у́мному Бог даёт.
+      Дураку́ сча́стье.
+        \mitem Дураку́ везде́ сча́стье.
+        \mitem Дурака́м везёт\fn{have heldet med sig}.
+}
+\dui{lykke}
+\ordsprog{\mwni{Lykken} er af glas.
+          (Når den skinner
+          klarest, brister den snarest.)}
+       {Сча́стье ве́шнее\fn{forårs-} вёдро\fn{vejr}.
+        \mitem На сча́стье нет зако́на\fn{lov}.}
+\dui{lykke}
+\ordsprog{ \mwni{Lykken} kommer, lykken går.}
+           {Ле́гче\fn{lettere} сча́стье найти́,
+            не́жели\fn{end} удержа́ть\fn{holde på}.}
+\dui{lykke}
+\ordsprog{\mwni{Lykken} er en underlig trold; hun gækker folk så mangfold.}
+{Счастли́вый хо́дит, на клад\fn{skat}
+набредёт\fn{\ru{набрести́}=støde på}, а несча́стный\fn{uheldig, ulykkelig}
+пойдёт, и гриба́\fn{svamp} не найдёт / и гроша́ не найдёт.}
+\dui{lykke}
+\ordsprog{\mwni{Lykken} er blind.}
+         {Сча́стье без глаз\fn{øjne}.}
+\ordsprog{Pris ingen \mw{lykkelig}, før han er \di{død}.}
+         {Не говори́ ``гоп''\fn{hop}, пока́ не перепры́гнешь\fn{klækker} (переско́чишь\fn{hopper}).}
+\dui{lyst}
+\ordsprog{Hver sin \mwni{lyst}.}{
+Ка́ждому своё.
+}
+\dui{lyst}
+\ordsprog{\mwni{Lysten} driver værket.}
+         {Была́ бы охо́та\fn{vilje}, рабо́та пойдёт\fn{går i gang}.
+         \mitem Бы́ло бы жела́ние.
+         % Бы́ло бы нелание\fn{???}
+         }
+\ordsprog{Den kan sagtens \mw{lyve}, som kommer langvejs fra.}
+         {Добро́ тому́ врать\fn{lyve}, кто за́ морем быва́л.
+        \mitem Хва́лит\fn{praler} чужу́ю\fn{fremmed} страну́, а сам в
+              неё ни ного́й\fn{med foden, sat sin fod}.}
+\ordsprog{Den der \mw{lyver}, \di{stjæler} også.}
+         {Кто лжёт\fn{roser}, тот и крадёт\fn{\ru{красть}=stjæle}.}
+\dui{læge}
+%\marginpar{Ikke helt forstået.}
+\ordsprog{Jo flere \mwni{læger}, jo flere syge.}
+             {Та душа́ не жива́, что по лекаря́м
+             пошла́.}
+\dui{lær}
+\ordsprog{\mwni{Lær} selv, før du lærer andre.}
+          {Научи́сь сам, пре́жде тем учи́ть други́х.}
+\ordsprog{Man skal \mw{lære}, så længe man lever.}
+         {Век\fn{århundrede} живи́, век учи́сь.
+         \mitem Учи́ться никогда́ не по́здно.
+         }
+  % slettet
+  %\ordsprog{Bor du hos en halt, må du \mw{lære} at halte.}
+  %      {С кем поведёшься, от того́ и наберёшься.}
+\ordsprog{Liden \di{tue} vælter ofte stort \mw{læs}.}
+        {Ма́лый дождь\fn{regn} укроща́ет\fn{tæmmer} больши́е ве́тры\fn{vinde}.
+        \mitem ка́пля\fn{dråben} ка́мень\fn{stenen} то́чит\fn{udhuler, slider væk}}
+\dui{løgn}
+\ordsprog{\mwni{Løgnen} har korte ben.}
+          { Ложь\fn{løgn} на тарака́ньих\fn{kakerlak-} но́жках
+        \mitem Ложь стои́т до ули́ки\fn{bevis}.}
+\ordsprog{En \mw{løgner} må have en god hukommelse.}
+         {Лжи́вому на́до па́мятным быть.
+        % \mitem Пошли́ тебе́ вруну́\fn{gldags: løgn} бог твёрдую\fn{fast, sikker} па́мять.
+        }
+\letter{M}
+\ordsprog{Fremmed \mw{mad} smager bedst.}
+                  {Чужа́я\fn{fremmed} еда́ всегда́
+                  ка́жется\fn{forekommer} вкусне́е.}
+\ordsprog{Uden \mw{mad} og drikke duer helten ikke. }
+               {Без еды́ и питья́ не годи́шься\fn{dur} никуда́
+               \mitem У голо́дного\fn{sulten} брю́ха\fn{mave} нет у́ха\fn{øre}.}
+\ordsprog{Megen \mw{mad}, megen sygdom.}
+       {Больша́я сыта́\fn{honningvand} брю́ху вреди́т\fn{skader}.
+        \mitem Где пиры́\fn{middagsselskaber} да чаи́, там и не́мочи\fn{sygdomme}.
+        \mitem Сла́дко е́стся, пло́хо спи́тся\fn{søvn}.}
+\dui{mad}
+\ordsprog{Man skal holde op, når \mwni{maden} smager bedst.}
+              {Ешь не доеда́й\fn{spise op}, пей не допива́й\fn{drikke ud}.
+        % \mitem Ешь вполсы́та\fn{halvmæt}, не пей до полупья́на\fn{halvfuld}.
+        }
+\dui{magt}
+\ordsprog{\mwni{Magt} går for ret.}
+        {Кто сильне́е\fn{stærkere}, тот и праве́е\fn{har mere ret}.
+        \mitem Чья сильне́е, та и праве́е.
+        \mitem У си́льного всегда́
+        беcси́льный\fn{den svage} винова́т\fn{skyldig}.}
+% slettet \ordsprog{Man kan ikke se en \mw{mand} længere end til tænderne.}
+%         {По пла́тью\fn{beklædning}(одёжке) встреча́ют,
+%              а по уму́ провожа́ют\fn{ledsage, tilbringe tiden}.}
+%%\ordsprog{Mands vilje er \mw{mands} himmerrig.}{}
+\dui{mave}
+\ordsprog{\mwni{Maven} bliver mæt før øjnene.}
+         {Глаза́ завиду́щие\fn{misundelige}, (ру́ки загребу́щие\fn{begærlig}).
+        \mitem Весь сыт\fn{mæt}, а глаза́ голо́дные\fn{sultne}.}
+\ordsprog{Fuld \mw{mave} studerer ikke gerne.}
+               {Сы́тое\fn{fuld} брю́хо\fn{mave} к уче́нию глу́хо\fn{sløv}.}
+  %\ordsprog{Fuld \mw{mave} gør døv for alt.}
+  %               {Больша́я сыть брю́ху вреди́т.}
+\ordsprog{Man kan ikke på én gang blæse og have \mw{mel} i munden.}
+         {Нельзя́ совмести́ть\fn{forbinde} несовмести́мое\fn{uforbindelige}.}
+  %\ordsprog{Jeg er et \mw{menneske}, og
+  %              intet menneskeligt er mig fremmed.}
+  %              {Ни от чего́ челове́ческого не отре́каюшь.}
+\ordsprog{Menneske er \mw{menneske} værst.}
+                   {Челове́к челове́ку --- волк\fn{ulv}.}
+\dui{menneskeligt}
+\ordsprog{Det er \mwni{menneskeligt} at fejle.}
+        {Челове́ку сво́йственно\fn{særegent} ошиба́ться\fn{fejle}.
+        \mitem Все мы гре́шны\fn{syndige}.}
+\dui{mester}
+\ordsprog{Arbejdet priser \mwni{mesteren}}{
+Рабо́та ма́стера хва́лит.
+\mitem Тако́в ма́стер, такова́ и рабо́та.
+}
+\ordsprog{Hold dig til den gyldne \mw{middelvej}.}
+               {Сле́дует держа́ться золото́й середи́ны.
+               (Избра́ть золоту́ю середи́ну).
+               \mitem Серёдка всему́ де́лу ко́рень\fn{rod}.
+       % \mitem Де́ло серёдкого кре́пко.
+       }
+\ordsprog{Man må ofte gøre gode \mw{miner} til slet \di{spil}.}
+              {(С)де́лать хоро́шую ми́ну
+              при плохо́й игре́.}
+\dui{modsætning}
+\ordsprog{ \mwni{Modsætninger} mødes.}
+           {Кра́йности\fn{modsætninger} (противополо́жности\fn{modsætninger}) схо́дятся.}
+\dui{morgenstund}
+\ordsprog{Morgenstund har guld i \mw{mund}.}
+              {У́тренний\fn{morgen-} час да́рит\fn{\ru{дари́ть}=skænke} зо́лотом нас.
+        \mitem Кто ра́но встаёт, тому́ Бог даёт (подаёт).
+        \mitem Кто ра́но встаёт, умне́е быва́ет.
+        \mitem Нажива́ть\fn{vinde, erhverve}, так ра́ньше встава́ть.
+        \mitem Вста́нешь ра́ньше, шагнёшь\fn{tager et par skridt} да́льше.
+        % \mitem У́тро ве́чера мудрене́е\fn{klogere}.
+        }
+\ordsprog{Det er en ussel \mw{mus}, der ej haver uden ét hul.}
+              {Худа́ та мышь, кото́рая
+              одну́ то́лько лазе́йку\fn{smutvej} зна́ет.}
+\ordsprog{Mange gør en \mw{myg} til en elefant.}
+                {Не сле́дует из му́хи\fn{flue} слона́.}
+\dui{myre}
+\ordsprog{En \mwni{myre} har og galde.}
+             {И у ку́рицы\fn{høne} се́рдце\fn{hjerte} есть.}
+\ordsprog{Man skal ikke græde over spildt \mw{mælk}.}
+              {
+              Поте́рянного\fn{tabte} не воро́тишь\fn{gøres om}.
+              \mitem Слеза́ми\fn{med tårer} го́рю\fn{sorg} не помо́жешь.
+              %Сня́вши головы́ по волоса́м не пла́чут.
+        \mitem Что с во́зу\fn{læs} упа́ло\fn{faldt}, то пропа́ло.
+        \mitem Сде́ланного не воро́тишь.}
+\ordsprog{Den, der kommer først til \mw{mølle}, får først malet.}
+              {
+        Кто пришёл, того́ и помо́л\fn{malede}.
+        \mitem  Кто перве́е, тот и праве́е.
+        \mitem Кто ра́но встаёт, тому́ Бог даёт.
+        \mitem Чей черёд\fn{tur}, то и берёт\fn{vælger}.}
+\ordsprog{Alting med \mw{måde}.}
+                 {Всё в ме́ру\fn{måde}.
+        \mitem Всему́ есть ме́ра.
+       % \mitem Арши́н\fn{mål (71 cm)} на сукно́\fn{klæde}, кувши́н\fn{kande} на вино́.
+       }
+\dui{mådehold}
+\ordsprog{\mwni{Mådehold} er det bedste lægemiddel.}
+        {Уме́ренность\fn{mådehold, moderation} --- мать здоро́вья.
+        \mitem Живи́ про́сто, проживёшь до́ ста\fn{op til hundrede}.}
+\letter{N}
+\ordsprog{God \mw{nabo} er bedre end broder i anden by.}
+              {Бли́зкий сосе́д лу́чше да́льней родни́\fn{familie}.}
+\ordsprog{Elsk din \mw{nabo}, men riv ikke gærdet imellem jer ned.}
+               {С сосе́дом дружи́, а забо́р\fn{gærde} чини́\fn{reparer, vedligehold}.}
+\ordsprog{En nar kan spørge oм mere end ti  vise kan svare på.}
+{
+На вса́кого дурака́, у́ма не напасёшься\fn{\ru{напасти́}=angribe}.
+}
+\ordsprog{Det er bedre at gå til sengs
+              uden \mw{nadver} (aftensmad) end at stå op med gæld.}
+              {Лу́чше без у́жина ложи́ться,
+              чем с долга́ми встава́ть.}
+\dui{nat}
+\ordsprog{\mwni{Natten} bringer råd.}
+                        {У́тро ве́чера мудрене́е\fn{visere}.}
+\ordsprog{Noget for \mw{noget}.}{Услу́га за услу́гу.}
+\dui{nyttig}
+\ordsprog{Den har fået alle stemmer, som har
+              forstået at forene det \mwni{nyttige}
+              med det behagelige.}
+              {Соедини́ть\fn{kombinere} прия́тное с поле́зным\fn{nyttig}.
+              \mitem Меша́й де́ло\fn{forretning} с безде́льем\fn{lediggang},
+              проживёшь век\fn{en evighed, lang tid} с весе́льем\fn{munterhed}.}
+\ordsprog{Man skal sætte tæring efter \mw{næring}.}
+         {По одёжке\fn{klæder} протя́гивай\fn{strække} но́жки\fn{fødderne}.}
+\dui{nærmest}
+\ordsprog{Enhver er sig selv \di{nærmest}.}
+                 {Своя́ руба́шка\fn{skjorte} бли́же к те́лу\fn{krop}.
+        \mitem Всяк про себя́, а Госпо́дь\fn{Herren} про всех.
+        \mitem Род да пле́мя\fn{stamme, slægt, folk} бли́зки, а свой рот\fn{mund} бли́же.
+        \mitem Вся семья́ своя́, да всяк лю́бит себя́.
+        \mitem Е́сли не я себе́, то кто помо́жет мне?}
+\dui{nærved}
+\ordsprog{\mwni{Nærved} skyder ingen hare.}
+        {Чуть\fn{næsten, lille smule} --- чуть не счита́ется\fn{tæller}.
+ % slettet       \mitem Про́мах\fn{forbier} есть про́мох.
+ % slettet        \mitem Ви́дит о́ко\fn{øje}, да зуб\fn{tand} неймёт.
+ % slettet       \mitem От аво́ся\fn{måske, forhåbentlig} добра́ не жди.
+        }
+\dui{nød}
+\ordsprog{I \mwni{nøden} skal man kende sine venner.}
+            {Друзья́ позна́ются в беде́\fn{ulykke}.
+        \mitem Без беды́ дру́га не узна́ешь.}
+\dui{nød}
+\ordsprog{\mwni{Nød} bryder alle love.}
+       {Нужда́ зако́н\fn{lov} лома́ет\fn{bryder}.
+        \mitem Нужда́ желе́зо лома́ет.
+        \mitem Нужда́ заста́вит\fn{tvinger til} пойти́ на всё.
+% slettet        \mitem По нужде́ поп\fn{paven} ест и боб\fn{bønner}.
+        }
+\dui{nød}
+\ordsprog{Når \mwni{nøden} er størst, er hjælpen nærmest.}
+        {Чем нужда́ бо́льше (сильне́й), тем бли́же по́мощь.
+      %  \mitem Чем бли́же беда́, тем бо́льше ума́\fn{forstand}.
+        \mitem Тьма\fn{mørket} сильне́й пе́ред рассве́том\fn{morgengry}.
+      % slettet  \mitem Нет ху́де\fn{ru{ху́до}=onde} без добра́.
+        }
+\dui{nødvendighed}
+\ordsprog{Man må ofte gøre en dyd af \mwni{nødvendigheden}.}
+ {
+ % (С)делать из нужды́ доброде́тель.
+ Когда́ нет раба́\fn{slave}, и сам по дрова́\fn{brænde}.}
+\dui{nød}
+\ordsprog{Nød lærer \mw{nøgen} kvinde at \di{spinde}.}
+              {Нужда́ нау́чит кузнеца́\fn{smed} сапоги́\fn{støvler} тача́ть\fn{касте, sy med kastesøm}.
+        \mitem Нужда́ нау́чит бо́гу моли́ться\fn{at bede}.
+        \mitem Голь\fn{fattigfolk} на вы́думки\fn{hittepåsomhed} хитра́\fn{listig, snu}.}
+\letter{O}
+\ordsprog{Sig mig, hvem du \mw{omgås}, så
+         skal jeg sige dig, hvem du er.}
+              {Скажи́ с кем ты знако́м, и я
+              скажу́, кто ты тако́в.
+              \mitem Скажи́ кто твой друг, и я
+              скажу́, кто ты.}
+\ordsprog{Med \mw{ondt} skal ondt fordrives.}
+              {Клин\fn{kile} кли́ном вышиба́ют.
+        \mitem В чём грех\fn{synd}, в том и спасе́нье\fn{frelse}.
+        % slettet \mitem Чем уши́бся, тем и лечи́шь.
+        }
+\dui{opsætte}
+\ordsprog{\mwni{Opsæt} ikke til i morgen, hvad du kan gøre i dag.}
+             {Не оставла́й на за́втра то что мо́жно сдела́ть сего́дня
+             \mitem Одно́ ны́нчe\fn{nu, i dag} лу́чше двух за́втра
+             % \mitem Поцелу́й меня́ сего́дня, а я тебя́ за́втра.
+             }
+\ordsprog{Et \mw{ord} er et ord og en \di{mand} er en mand.}
+         {Да́вши\fn{havende givet} сло́во, держи́сь\fn{hold det}.}
+\ordsprog{Det \mw{ord} du har sagt, prøv om du kan tage det igen.}
+              {Ска́заннoго не воро́тишь\fn{vender}.
+        \mitem Что напи́сан перо́м\fn{med pen}, не вы́рубишь топоро́м\fn{med økse}.
+        \mitem Сло́во не воробе́й\fn{spurv}: вы́летит\fn{flyver ud},
+               не пойма́ешь.}
+\dui{ord}
+\ordsprog{\mwni{Ord} og \di{gerning} er to ting.}
+                     {Ско́ро \ri{сло́во} ска́зывается,
+                     а не ско́ро
+                     \ri{де́ло} де́лaется.
+        \mitem Мно́го слов, а ма́ло де́ла.}
+\dui{orden}
+\ordsprog{\mwni{Orden} er det halve \di{arbejde}.}
+         {Поря́док --- душа́\fn{sjæl} вся́кого де́ла.}
+\ordsprog{Enhver har sin \mw{orm}.}
+         {У ка́ждого свои́ причу́ды\fn{særheder, luner}.}
+\dui{orm}
+\ordsprog{Selv \mwni{ormen} krymper sig i døden.}
+               {И у \ri{ку́рицы} \ri{се́рдце} есть.}
+\dui{ormeføde}
+\ordsprog{Vi skal alle engang blive til \mwni{ormeføde}.}
+         {Мы все когда́-нибудь пойдём на корм\fn{føde} червя́м\fn{orme}.}
+\letter{P}
+\dui{papir}
+\ordsprog{\mwni{Papiret} er tålmodigt.}
+         {Бума́га всё (с)те́рпит.}
+\dui{part}
+\ordsprog{Man må høre begge \mwni{parter}.}
+         {Ну́жнo вы́слушать о́бе сто́роны.}
+\ordsprog{Penge avler \mw{penge}.}
+         {
+         %Де́ньги иду́т к бога́тому\fn{den rige}.
+         Де́ньги ро́дят де́ньги.
+         }
+\ordsprog{Hvor \mw{penge} er, kommer penge til.}
+         {Де́ньги к деньга́м.}
+\dui{penge}
+\ordsprog{Pemge går hurtigt.}{Де́ньги про́сто та́ют.}
+%\marginpar{samme betydning?}
+%\ordsprog{Stjålne \mw{penge} varer ikke længe.}
+%         {Чужи́мэ\fn{fremmede} бога́т не бу́дешь.}
+\dui{penge}
+\ordsprog{\mwni{Penge} gør manden.}
+         {За свой грош везде́\fn{overalt} хоро́ш.}
+\dui{penge}
+\ordsprog{\mwni{Penge} skaber ikke lykken.}
+         {Не в деньга́х сча́стье.
+        \mitem Бо́льше де́нег, бо́льше хлопо́т\fn{besvær}.}
+%\dui{penge}
+%\ordsprog{\mwni{Penge} er runde, fordi de skal trille.}
+%       {Де́нььги подплыва́ют\fn{svømmer}.
+%        \mitem Де́ньги родя́т\fn{avler} де́ньги.}
+\ordsprog{For \mw{penge} får man alt.}
+         {Де́ньги всё мо́гут.}
+\ordsprog{Penge lugter ikke}{Де́ньги не па́хнут.}
+\dui{perle}
+\ordsprog{Man skal ikke kaste \mwni{perler} for svin.}
+         {Не мечи́те\fn{kaste} би́сер\fn{perler} пе́ред сви́ньями.}
+\ordsprog{Man kan ikke få både i \mw{pose} og sæk.}
+              {
+    Оди́н пиро́г два ра́за не съешь.
+   \mitem Нельзя́ де́лать одновре́менно две взаимоисключа́ющие\fn{indbyrdes uforenelige} ве́щи.
+%              За двумя́ за́йцами\fn{harer} пого́нушься\fn{jager}, ни одного́ не пойма́ешь\fn{fanger}.
+              }
+\ordsprog{Alting har sin pris}{За всё (в жи́зни) на́до плати́ть\fn{betale}.}
+\ordsprog{En \mw{profet} er aldrig agtet i sit fædreland.}
+             {Нет проро́ка\fn{profet} в своём оте́честве\fn{fædreland}.
+        \mitem На свое́й земле́\fn{land} никто́ проро́ком не быва́ет.}
+\dui{præst}
+\ordsprog{Når det regner på \mwni{præsten}, drypper det på degnen.}
+              {Свяще́нник зарабо́тал\fn{tjente} и
+              пономарю́\fn{kirketjener} перепа́ло\fn{tilfaldt}.}
+\dui{præst}
+\ordsprog{Det går ikke altid så skidt, som \mwni{præsten} prædiker.}{Не так стра́шен\fn{frygtelig} чёрт\fn{djævlen}, как его́ малю́ют\fn{man maler}.}
+\ordsprog{Man kan let give af en andens \mw{pung}.}
+              {Из чужо́го карма́на легко́ плати́ть\fn{betale}.}
+%\ordsprog{Man sætter \mw{pølse} for og pølse bag, pølsen bevarer dog sin smag.} {Куда́\fn{ikke forstået} ни кинь, всё (везде́/всю́ду) клин.}
+\letter{R}
+\ordsprog{Den ene \mw{ravn} hugger ikke øjet ud på den anden.}
+              {Во́рон во́рону глаз (гла́за) не вы́клюет\fn{hakke ud. \ru{клева́ть}=hakke}.
+        \mitem Вор во́ра не вы́даст\fn{\ru{вы́дать}=stikke, udlevere}.}
+\ordsprog{Man skal ikke nævne \mw{reb} i den hængtes hus.}
+              {В до́ме пове́шенного\fn{hængte} не говоря́т о верёвке\fn{reb}.}
+\ordsprog{Ingen \mw{regel} uden undtagelse.}
+                {Нет пра́вила\fn{regler} без исключе́ния.}
+\ordsprog{Efter \mw{regn} kommer solskin.}
+                {По́сле до́ждика (дождя́) и вёдро\fn{smukt vejr} бу́дет (бу́дет со́лнышко\fn{solskin}).}
+\ordsprog{Den, der gør \mw{regning} uden vært, må regne om igen.}
+         {% slettet Гру́бо посчита́ться.
+         Без меня́ меня́ жени́ли\fn{giftede}.
+        % \mitem Дейтвовать, не прининма́я в расчёт обстоя́тльст?????
+         }
+\ordsprog{Godt \mw{regnskab} gør (giver) godt \di{venskab}.}
+               {Чаще счёт, кре́пче\fn{stærkere} дру́жба.
+%        \mitem Де́ньги счёт\fn{regnskab, afregning} лю́бят.
+%        \mitem Угово́р\fn{enighed} доро́же (лу́чше) де́нег.
+%        \mitem Де́нежка\fn{lille skilling} счёт лю́бит.
+}
+\dui{relativt}
+\ordsprog{Alt er \mwni{relativt}.}
+        {Всё относи́тельно.}
+\ordsprog{Man skærer ofte bred \mw{rem} af en andens \di{hud}.}
+        {Из чужо́й спины́ реме́шки\fn{\ru{ремешо́к} = lille rem} крои́ть.
+        % \mitem Легко́ на чужи́е грехи́ е́хать.
+        \mitem Бе́лые\fn{hvide} ру́чки\fn{håndtag, dørgreb, hank} чужи́е\fn{andres} труды́\fn{arbejde} лю́бят.}
+\dui{ren}
+\ordsprog{For den \mwni{rene} er alting rent.}
+       {Чисто́му всё чи́сто.
+        \mitem Хоро́шему всё хорошо́.}
+% slettet \ordsprog{Højeste \mw{ret} er ofte uret.}{}
+\ordsprog{Mangen \mw{rider} ikke den dag de sadler.}
+         {Ра́но оседла́ли\fn{sadlede, besteg hest}, да по́здно
+                 поскака́ли\fn{satte i galop}.
+%          \mitem Он всё де́лает в час по ча́йной ло́жке\fn{teske}.
+}
+\ordsprog{Det er svært for den rige at komme i Himmerigs Rige.}{
+Тру́дно бога́тому войти́ в Ца́рство Небе́сное.
+}
+\ordsprog{Alle veje fører til \mw{Rom}.}{Все доро́ги
+               веду́т в Рим (в Москву́).}
+\ordsprog{Man kan spørge sig frem til \mw{Rom}.}
+              {Язы́к до Ки́ева доведёт\fn{vil bringe}.}
+\ordsprog{\mw{Rom} blev ikke bygget på en dag.}
+         {Не в оди́н день Москва́ стро́илась\fn{blev bygget}.
+        \mitem И Москва́ не сра́зу стро́илась.}
+\dui{rose}
+\ordsprog{Der er ingen \mwni{roser} uden torne.}
+              {Нет ро́зы без шипо́в\fn{torne}.}
+\dui{rotte}
+\ordsprog{\mwni{Rotterne} forlader den synkende skude.}
+            {Кры́сы\fn{rotter} бегу́т с то́нущего\fn{sunkne} корабля́\fn{skib}.}
+\dui{rygte}
+\ordsprog{\mwni{Rygtet} vokser, mens det løber.}
+         {До́брая сла́ва\fn{omdømme/rygte} лежи́т, а дурна́я
+         молва́\fn{rygte} далеко́ бежи́т.}
+\dui{rygte}
+\ordsprog{\mwni{Rygtet} lever, når manden er død.}
+                        {От молвы́ не уйдёшь.}
+\ordsprog{Godt \mw{rygte} er det bedste arve\-gods.}
+               {До́брая сла́ва лу́чше зо́лота.
+      % slettet  \mitem До́брая сла́ва в углу́(за печкой\fn{pejsen-ovnen}) сиди́т, худа́я сла́ва по доро́жке\fn{(gl.) sti, vejsti} бежи́т.
+     }
+\ordsprog{Med \mw{ræv} fanger man ræv.}
+              {Клин\fn{kile} кли́ном вышиба́ют\fn{puffer, støder}.}
+\ordsprog{En gammel \mw{ræv} er ikke let at fange.}
+         {Ста́рую лиси́цу\fn{ræv} не тра́вят\fn{jage, forgifter} молоды́ми соба́ками.
+        \mitem Ста́рого воробья́\fn{spurv} на мяки́не\fn{avner} не пойма́ешь
+        (не обма́нешь\fn{narrer}).
+      %  \mitem Ста́рый конь\fn{hest} ми́мо\fn{forbi} не сту́пит\fn{træder}.
+      }
+\dui{ræv}
+\ordsprog{De er sure!, sagde \mwni{ræven} om \di{rønnebær}rene.}
+             {Зе́лен виногра́д\fn{vindruer}!
+       % slettet \mitem ви́дит о́ко (глаз), да зуб неймёт.
+       }
+\dui{ræv}
+\ordsprog{Man skal ikke lade ræven vogte gæs.}{Э́то всё равно́ поста́вить лису́ стере́чь гусе́й}
+\ordsprog{I dag \mw{rød}, i morgen død.}
+            {Сего́дня живо́й, за́втра свято́й\fn{helgen}.
+        \mitem Сего́дня венча́лся\fn{blev kronet/giftede sig}, а за́втра сконча́лся\fn{døde}.
+        \mitem Сего́дня в порфи́ре\fn{purpurfarvet sten, porfyr}, а за́втра в моги́ле\fn{grav}.}
+\ordsprog{Der går ikke \mw{røg} af en brand, uden
+              at der er ild i den.}
+              {Нет ды́ма без огня́.
+        \mitem Ды́ма без огня́ не быва́ет.}
+\ordsprog{Man får altid \mw{råd} nok, når man ingen behøver.}
+         {Да́ли оре́хов\fn{nødder} бе́лке\fn{egern}, когда́ зубо́в\fn{tænder} не ста́ло\fn{ikke var mere}.}
+\ordsprog{Et godt \mw{råd} er bedre end penge.}
+             {Хоро́ший сове́т доро́же зо́лота.}
+\dui{råde}
+\dui{mennesket}
+\dui{Gud}
+\ordsprog{Mennesket spår, Gud rå'r (\mwni{råder}).}
+          {Челове́к предполага́ет\fn{antager, forventer}, Бог рас\-полага́\-ет\fn{råder}.}
+\ordsprog{Når alle vil \mw{råde}, giver det ingen til både (gavn).}
+         {Мно́гие жале́ют\fn{beklager, undskylder}, да не́кому помо́чь.}
+\ordsprog{Det er bedre at være \mw{rådvild} end \di{husvild}.}
+         {Лу́чше не знать то́чно, что де́лать,
+         чем не знать, куда́ идти́.}
+\letter{S}
+\dui{salt}
+\ordsprog{\mwni{Salt} råder for maden alt.}
+         {Без со́ли стол\fn{bord} криво́й\fn{skævt}.}
+\ordsprog{Efter en \mw{samler} kommer en spreder.}
+         {Оте́ц накопи́л\fn{akkumulerer}, а сын раструси́л\fn{spredte, strøede}.
+         \mitem Отцы́ нажива́ют\fn{skraber sammen, tjener}, де́ти прожива́ют\fn{sætter over styr, bruger til at leve}.}
+\ordsprog{En god \mw{samvittighed} er den bedste \di{hovedpude}.}
+         {У кого́ со́весть\fn{samvittighed} чиста́, тот спит споко́йно\fn{hyggeligt, trygt}.
+         \mitem У кого́ со́весть чиста́, у того́ поду́шка\fn{pude} не ве́ртится\fn{drejer rundt}.
+        % slettet \mitem До́брая со́весть не бои́тся клеве́т\fn{sladder}.
+        }
+\dui{sandhed}
+\ordsprog{\mwni{Sandhed} er rigere end \di{loven}.}
+         {Пра́вда доро́же зо́лота\fn{samme betydning?}.
+        \mitem Варва́ра\fn{navn?} мне тётка\fn{tante}, а пра́вда мне сестра́ (мать).}
+\dui{sandhed}
+\ordsprog{\mwni{Sandheden} slår ikke til for den, der har munddiarré.}
+         {Пра́вда не речи́ста\fn{godt skåret for tungebåndet, snakkesalig}.
+        \mitem На пра́вду ма́ло слов.}
+\dui{sandhed}
+\ordsprog{\mwni{Sandheden} er altid ilde hørt.}
+         {Пра́вда глаза́ ко́лет\fn{\ru{коло́ть} stikke, prikke}.
+        \mitem  Пра́вда уши́ дерёт\fn{\ru{драть} = flå}.
+        \mitem Пра́вду говори́ть, дру́жбу\fn{venskab} теря́ть\fn{miste}.
+        \mitem Пра́вде нигде́ нет ме́ста.}
+\dui{sandhed}
+\ordsprog{\mwni{Sandhed} består, løgn forgår.}
+         {Всё ми́нется\fn{forgår}, одна́ пра́вда оста́нется\fn{bliver tilbage, består}.}
+\ordsprog{Sjældent fanger sovende mand \mbox{\mw{sejr}}.}
+         {До́лго спать, с до́лгом\fn{med gæld} встать.}
+\ordsprog{Slet \mw{selskab} fordærver gode sæder.}
+               {
+               % slettet Злы́е\fn{dårlige, onde} бесе́ды\fn{samtaler}
+              % тлят\fn{\ru{тлить} = ødelægge} обы́чаи\fn{vaner}
+              % благи́е\fn{gode}.
+        Дурны́е приме́ры зарази́тельны\fn{smitsomme}.
+        \mitem С худы́м поведёшься\fn{\ru{повести́сь} = indlade sig med?}, худо́е переймёшь\fn{\ru{переня́ть} = overtage}.
+        \mitem С кем поведёшься\fn{bevæger dig}, от того́ и наберёшься\fn{stimle sammen.}}
+\dui{selvgjort}
+\ordsprog{\mwni{Selvgjort} er \di{velgjort}.}
+         {
+        Лу́чше всего́ то, что сам сде́лаешь.
+        \mitem Не верь по́вару\fn{kok}, иди́ сам по́ воду.
+        \mitem Полага́йся\fn{stol på} на самого́ себя́.
+        % slettet \mitem Своя́ рука́ влады́ка\fn{hersker}.
+        % slettet \mitem Своя́ во́ля влады́ка.
+}
+\dui{selvros}
+\ordsprog{\mwni{Selvros} \di{stinker}.}
+%    slettet    {Самовосхвале́ние\fn{selvglorificering}отврати́тельно\fn{afskyeligt}\fn{Note jeg ikke forstår \ru{похвальта́}}.
+        {Сам себя́ ни хвали́\fn{ros}, ни хули́\fn{hån}.
+        \mitem Пога́на\fn{uren, rådden} та де́вка\fn{pige, tøs}, что сама́ себя́ хвали́т.
+        \mitem Саморекла́ма\fn{selvpromovering} --- ещё не рекоменда́ция\fn{anbefalet}.}
+\ordsprog{Bedre \mw{sent} end aldrig.}
+                {Лу́чше по́здно, чем никогда́.}
+
+\ordsprog{Som de \di{gamle} \mw{sjunge}, så \di{kvidre} de
+\di{unge}.}
+        {Каковы́ дя́дьки\fn{onkler}, таковы́ и дитя́тки\fn{børn}.
+        \mitem Како́в поп\fn{præst}, тако́в и прихо́д\fn{menighed}.
+        \mitem За что ба́тька\fn{fader}, за то и де́ти.}
+\ordsprog{En \di{sund} \mw{sjæl} i et sundt \di{legeme}.}
+        {В здоро́вом те́ле\fn{krop} --- здоро́вый дух\fn{ånd, sjæl}.}
+\ordsprog{Af \mw{skade} bliver man klog, men sjældent rig.}
+             {От беды́\fn{ulykke} умне́ют, да ре́дко богате́ют.}
+    %  slettet  \mitem Беды́ науча́ют челове́ка и му́дрости.
+    %  slettet  \mitem Обжёгшись на молоке́, ста́нешь дуть и на́ воду.}
+\ordsprog{Jo mere man rører ved \mw{skarn}, desto mere stinker det.}
+             {Гря́зью\fn{mudder} игра́ть --- ру́ки мара́ть\fn{gøre beskidt}.
+        \mitem Не трись\fn{\ru{тереться}=gnide, tørre, frottere sig} во́зле\fn{ved siden af} са́жи\fn{sod},
+             сам замaра́ешься\fn{bliver snavset}.}
+\ordsprog{Sket er \mw{sket}.}
+               {Что случи́лось, то случи́лось.
+               \mitem Что с во́за\fn{\ru{воз}=vognlæs} упа́ло, то пропа́ло.}
+\ordsprog{Når \mw{skidt} kommer til ære, ved det ikke hvordan
+              det vil være.}
+              {Посади́\fn{sæt} свинью́ за стол\fn{bord}, она́ и но́ги на стол\fn{benene på bordet}.}
+%\dui{skidt}
+% slettet\ordsprog{\mwni{Skidt} renser tarmene, skader ikke.}
+%         {Бо́льше гря́зи, толще морда.}
+\dui{skik}
+\ordsprog{\mwni{Skik} følge eller land fly.}
+         {В чужо́м\fn{fremmed} до́ме не ука́зывают\fn{anviser}.
+        \mitem В чужо́й монасты́рь\fn{kloster} со свои́м уста́вом\fn{reglement} не е́здят (не хо́дят).
+% slettet        \mitem С волка́ми\fn{ulve} жить, по во́лчьи\fn{ulvemaner} выть\fn{hyle}.
+}
+\dui{skik}
+\ordsprog{Hvert land har sine \mwni{skikke}.}
+                {Ско́лько сёл\fn{landsbyer}, сто́лько вер\fn{overbevisninger}.
+        \mitem Ско́лько ме́льников\fn{møllere}, сто́лько мер\fn{mål}.
+        \mitem Что го́род; то но́ров\fn{særpræg??}, что дере́вня\fn{landsby}, то обы́чай\fn{vannligt}.}
+\ordsprog{Den, der er slået til \mw{skilling}, bliver aldrig til
+               en daler.}
+               {Осла́\fn{æsel} хоть в Пари́ж\fn{Paris}, всё бу́дет рыж\fn{rødhåret}.
+        \mitem Роди́лся неу́мный\fn{uden forstand}, и умрёшь дурако́м\fn{tåbe}.}
+\ordsprog{Den, der ikke vil have en \mw{skilling}, får aldrig to. }
+         {Без копе́йки рубль не живёт (рубля́ не быва́ет).}
+\dui{skinnet}
+\ordsprog{\mwni{Skinnet} bedrager.}
+         {Вне́шность\fn{udseende} обма́нчива\fn{bedrager}.
+        \mitem Не всё, что се́ро\fn{gråt}, волк\fn{ulv}.
+        \mitem Приме́ты\fn{tegn, varsler} в све́те\fn{lyset} ча́сто лгут\fn{lyver}.
+        \mitem Не вся́кий плут\fn{slyngel}, кто ви́дом худ\fn{tynd}.}
+\dui{sko}
+\ordsprog{Den ved bedst, som har \mwni{skoen} på, hvor den trykker.}
+              {
+              % slettet Что у кого́ боли́т, тот о том и говори́т.
+        Ка́ждый зна́ет, в чём его́ сла́бое ме́сто\fn{svage punkt} (недоста́ток\fn{mangel}/пробле́ма).}
+\dui{skomager}
+\ordsprog{\mwni{Skomager}, bliv ved din læst.}
+         {Знай сверчо́к\fn{fårekylling}, свой шесто́к\fn{arne}.
+        \mitem Всяк сверчо́к, знай свой шесто́к.}
+\dui{skomager}
+\dui{smed}
+\ordsprog{\mwni{Skomagerens} kone (børn) og smedens hest har
+                             gerne de dårligste sko.}
+         {Портно́й\fn{skrædder} без порто́к\fn{bukser}, сапо́жник\fn{skomager} без сапо́г\fn{sko}.}
+\dui{skov}
+\dui{træ}
+\ordsprog{Ofte kan man ikke se \mwni{skoven} for træer.}
+         {Из-за дере́вьев ле́са не ви́дит.
+        \mitem За дере́вьями ле́са не ви́дит.}
+\dui{skov}
+\ordsprog{Hvad skal han i \mwni{skoven}, der ræddes for hver busk.}
+         {Волко́в\fn{ulve} боя́ться --- в лес не ходи́ть.
+        \mitem Во́лка боя́ться, быть без грибо́в\fn{svampe}.}
+\ordsprog{Det er det første \mw{skridt}, der koster.}
+         {Тру́ден то́лько пе́рвый шаг.
+         \mitem Лиха́\fn{ond, slem, slet} беда́\fn{ulykke} нача́ло\fn{begyndelse}.
+        \mitem Вся́кое нача́ло тру́дно.}
+         %%%%%%%%%%% her
+\ordsprog{Man kan ikke springe over sin egen \mw{skygge}.}
+              {Ло́шадь быстра́, да не уйдёт\fn{gå fra} от хвоста́\fn{hale}.
+        \mitem Себя́ не переплю́нешь\fn{\ru{перепло́ныть}=spytte længere, overgå (\ru{плева́ть} = spytte)}.}
+\dui{skynde}
+\ordsprog{\mwni{Skynd} dig langsomt.}
+         {Спеши́\fn{hav travlt, skynd dig} ме́дленно.
+         \mitem Торопи́ться\fn{skynder sig, haster} ме́дленно.
+  % slettet       \mitem И ре́дко\fn{sjældent} шага́ет\fn{tager et skridt}, да твёрдо\fn{fast} ступа́ет\fn{træder}.
+  }
+\ordsprog{Ingen kan undgå sin \mw{skæbne}.}
+                {
+                Никто́ не уйдёт от свое́й судьбы́\fn{skæbne}.
+             \mitem От судьбы́ не уйдёшь.
+        \mitem От своего́ ро́ка(ро́ку)\fn{\ru{рок} = skæbne} никто́ не уйдёт.
+        \mitem Нельзя боро́ться\fn{kæmpe mod} с судьбо́й.
+        }
+\ordsprog{Hvi ser du \mw{skæven}, som er i din broders øje, men
+              bjælken i dit eget bliver du ikke var.}
+              {В чужо́м глазу́ сучо́к\fn{gren/knast}(сори́нку\fn{støvkorn}) ви́дим, а в своём и бревна́\fn{\ru{бревно́}=bjælke}
+              не замеча́ем.}
+\dui{smag}
+\ordsprog{\mwni{Smag} og behag er forskellig.}
+                      {О вку́сах\fn{smag} не спо́рят.
+        \mitem На вкус и на цвет\fn{farve}, това́рища\fn{kammerat} нет.
+        \mitem У ка́ждого свой вкус.}
+\dui{smuler}
+\ordsprog{\mwni{Smuler} er også brød.}
+         {Не пренебрега́й\fn{være nedladende, ringeagte, forsømme} ма́лым.}
+\dui{smøre}
+\ordsprog{Den, der \mwni{smører} godt, kører godt.}
+         {Не подма́жешь\fn{smører}, не пое́дешь.
+        \mitem Суха́я\fn{tør} ло́жка\fn{ske} рот\fn{mund} дерёт\fn{\ru{драть}=flå, flænse, rive itu}.}
+\ordsprog{Hver \mw{so} synes bedst om sine grise.}
+               {Вся́кому своё ми́ло.
+               \mitem Всяк кули́к\fn{ryle} своё боло́то\fn{sump, mose} хва́лит\fn{roser}.}
+\dui{sol}
+\ordsprog{Når man taler om \mwni{solen}, så skinner den.}
+              {О во́лке\fn{ulv} речь, а волк навстре́чь.
+        \mitem Лёгок\fn{let} на поми́не\fn{erindring, ihukommelse}.}
+\dui{sol}
+\ordsprog{Intet nyt under \mwni{solen}.}
+         {Нет ничего́ но́вого под со́лнцем.
+         \mitem Ничто́ не но́во под луно́й\fn{månen}.}
+\dui{sol}
+\ordsprog{\mwni{Solen} har også sine pletter.}
+         {И на со́лнце есть пя́тна\fn{pletter}.}
+% slettet for nu \dui{sol}
+% \ordsprog{\mwni{Solen} går op over onde og gode.}
+%          {И за гора́ми\fn{bjergene} живу́т\fn{bor} лю́ди.}
+\dui{sol}
+\ordsprog{Lad ikke \mwni{solen} gå ned over din vrede.}
+         {Со́лнце не зайдёт во гне́ве\fn{vrede} ва́шем.}
+\dui{sol}
+\ordsprog{Ingen kender dagen før \mwni{solen} går ned.}
+         {Хвали́\fn{ros} у́тро днём, а день ве́чером.}
+\ordsprog{Det er en dårlig \mw{soldat},
+              der ikke tror at kunne blive general.}
+         {Плох тот солда́т, кото́рый не
+          мечта́ет (не наде́ется) стать генера́лом.}
+\dui{sorg}
+\ordsprog{\mwni{Sorg} og \di{glæde}, de vandre til hobe.}
+         {Не узна́в го́ря\fn{sorg, ulykke}, не узна́ешь и ра́дости.}
+\ordsprog{Én \mw{sorg} kommer sjældent alene.}
+         {Беда́ не прихо́дит одна́.}
+\dui{spare}
+\ordsprog{\mwni{Spar}!, så har du.}
+         {Береги́\fn{spar} де́нежку про чёрный\fn{sort, mørk} день.}
+\dui{spare}
+\ordsprog{Hvad der er \mwni{sparet}, er tjent.}
+         {Не истра́тил\fn{brugte}, всё равно́\fn{det samme som} что зарабо́тал\fn{tjente}.
+         \mitem Бережли́вость\fn{omhyggelighed, sparsommelighed} лу́чше бога́тства\fn{rigdom}.}
+\dui{sparke}
+\ordsprog{Man \mwni{sparker} ikke på liggende mand.}
+              {Лежа́щего не бьют\fn{slår}.}
+\ordsprog{Uheld i \mw{spil}, held i kærlighed.}
+         {Несчастли́в в игре́, так счастли́в в любви́.
+         \mitem Ему́ везёт\fn{lykkes med} в  игре́, ему́ не везёт в любви́.}
+%\ordsprog{Man skal holde op med at \mw{spise}, når maden smager bedst.}{}
+\dui{spot}
+\ordsprog{\mwni{Spot} og skade følges ad.}
+         {Свали́сь\fn{segnede, faldt om} то́лько с ног,
+          а за тычка́ми\fn{\ru{тычо́к}=stav} де́ло не ста́нет\fn{standser}.
+        \mitem Кого́ бьют\fn{slås}, того́ и браня́т\fn{\ru{брани́ть}=skælde ud}.}
+\dui{spørge}
+\ordsprog{Som man \mwni{spørger}, får man svar.}
+              {Како́в вопро́с, тако́в отве́т.}
+%\ordsprog{Det er slemt at støde sig to gange på samme \mw{sten}.}
+%              {На один гра́би не наступают дважды.}
+\dui{sten}
+\ordsprog{Vand udhuler \mwni{stenen}.}
+         {Вода́ (и) ка́мень то́чит\fn{udhule, hvæsse, slide op}.}
+\ordsprog{Rullende \mw{sten} samler ikke mos.}
+         {На одно́м ме́сте (и) ка́мень мхом\fn{\ru{мох}=mos}
+         обраста́ет\fn{gror til med}.}
+\ordsprog{Man skal ikke kaste med \mw{sten}, når man bor
+              i et glashus.}
+       {Нельзя́ кида́ться\fn{kastе} камня́ми , когда живёшь
+            в стекля́нном до́ме.
+       \mitem Не кида́й камня́ми , когда живёшь
+            в стекля́нном до́ме.
+        \mitem Не броса́й\fn{kast} камне́й\fn{med sten} в чужо́й огоро́д\fn{have}.
+        \mitem Не суди́\fn{døm} друго́го за то, в чём сам не безгре́шен\fn{uden synd}.
+        \mitem Други́х не суди́, на себя́ погляди́\fn{betragt}.}
+\dui{struds}
+\ordsprog{\mwni{Strudsen} gemmer sit hoved under vingen.}
+{Стра́ус пря́чет\fn{\ru{пря́тать} = gemme, skjule} го́лову под крыло́\fn{vinge}.}
+\ordsprog{Efter \mw{storm} kommer stille.}
+         {По́сле дождя́\fn{regn} вёдро\fn{godt vejr} наступа́ет\fn{bryder frem}.
+         % slettet \mitem Зати́шье пе́ред бу́рей
+         }
+\dui{stud}
+\ordsprog{Den, der ager med \mwni{stude}, kommer også med.}
+         {
+         И ти́хий воз\fn{(vogn)læs} бу́дет на горе́.
+         \mitem Ти́ше\fn{\ru{ти́хий} = stille, stilfærdig} е́дешь, да́льше бу́дешь.
+         %\mitem Сперва́\fn{fra begyndelsen} не пры́тко\fn{springsk, urolig}, а там поти́ше\fn{roligt??}.
+         }
+\dui{stud}
+\ordsprog{Gamle \mwni{stude} har hårde horn.}
+         {Стар козёл\fn{gedebuk}, да кре́пкие рога́.}
+\ordsprog{
+        Det er slemt at \mw{støde} sig to gange på samme \di{sten}.}
+{На одни́ гра́бли\fn{rive} два́жды\fn{to gange} не наступа́ют\fn{træder på}.}
+\ordsprog{Stor \mw{ståhej} for ingenting.}
+        {Мно́го шу́ма\fn{larm} из ничего́.
+        \mitem Мно́го шу́му, ма́ло то́лку\fn{mening, sund fornuft}.
+        \mitem Мно́го гро́му\fn{torden}, а ма́ло де́ла.
+        \mitem Есть что слу́шать\fn{høre}, да не́чего\fn{ingen grund til} ку́шать\fn{spise??}.
+        \mitem Мно́го гро́му по пусто́му\fn{ingenting}.
+        \mitem За всё бра́ться\fn{give sig i kast med}, ничего́ не сде́лать.}
+\dui{sult}
+\ordsprog{\mwni{Sult} er den bedste kok.}
+        {Го́лод лу́чший по́вар.
+        % \mitem Где го́лодно, там и хо́лодно.
+        }
+\dui{sult}
+\ordsprog{\mwni{Sult} er et hvast sværd i grådig mave.}
+         {Голо́дная ку́рица\fn{høne} ви́дит про́со\fn{hirse} во сне\fn{søvn}.
+        \mitem У голо́дного всё хлеб на уме́\fn{forstand, hoved}.
+        \mitem Голо́днои ку́рице про́со\fn{hirse} сни́тся\fn{drømmer}.
+        \mitem У голо́дной куме́\fn{gudmoder} хлеб на уме́.
+        }
+\dui{sund}
+\ordsprog{For de \mwni{sunde} er alting sundt.}
+         {Здоро́вому и нездоро́вое здоро́во.}
+\ordsprog{Én \mw{svale} gør ingen \di{sommer}.}
+         {Одна́ ла́сточка не де́лает весны́.
+        \mitem Одна́ ла́сточка\fn{svale} ещё не де́лает весны́.}
+\ordsprog{Intet \mw{svar} er også svar.}
+         {Ти́хое молча́ние\fn{tavshed} чем не отве́т.
+        \mitem Молча́ние --- знак\fn{tegn (på)} согла́сия\fn{samtykke}.}
+\ordsprog{Som man råber i skoven, får man \mw{svar}.}
+         {Как ау́кнется\fn{råbe "a-u"}, так и откли́кнется\fn{give lyd fra sig, svare}.
+        \mitem По спро́су\fn{efterspørgsel} и отве́т.}
+\ordsprog{Mangel på \mw{svigermoder} er den bedste medgift.}
+         {Отсу́тствие\fn{fravær, mangel på} тёщи\fn{svigermor} лу́чшее прида́ное\fn{medgift}.}
+\dui{sygdom}
+\ordsprog{\mwni{Sygdom} flyver på, men kryber af.}
+         {Боле́знь\fn{sygdom} вхо́дит
+         пуда́ми\fn{Gammel russisk vægtenhed 1 \ru{пуд} = 16,3 kg.},
+         а выхо́дит золотника́ми\fn{Gammel russisk vægtenhed 1 \ru{золотник} 4,2658 gram}.}
+\dui{synde}
+\dui{sove}
+\ordsprog{De, som sover, \mwni{synder} ikke.}
+         {Тот, кто спит, не греши́т
+        \mitem Спишь --- ме́ньше греши́шь\fn{synder}.
+        \mitem Бо́льше спишь, ме́ньше греши́шь.}
+\ordsprog{Efter os \mw{syndfloden}.}
+        {По́сле нас хоть пото́п\fn{oversvǿmmelse, syndflod}.
+        \mitem По́сле нас хоть трава́\fn{græs} не расти́\fn{vokse}.
+        \mitem По́сле нас хоть волк траву́ ешь.}
+\ordsprog{Andre lande, andre \mw{sæder}.}
+        {Что край\fn{egn, land}, то обы́чай\fn{sædvane}.
+        \mitem Во вся́кой земле́\fn{land} свой обы́чай.
+        \mitem Что го́род, то но́ров\fn{gammeldags: skik, sæd}
+        (нрав\fn{skikke, sæder}).}
+\ordsprog{Det er ikke godt for en tom \mw{sæk} at stå oprejst.}
+         {Не легко́\fn{let} пусто́му\fn{tom} мешку́\fn{sæk}
+         стоймя́\fn{opretstående} стоя́ть.}
+\dui{søge}
+\ordsprog{Hvad, du \mwni{søger}, skal du finde.}
+         {
+         Ищи́те, и найдёте.
+         % Тот и сы́щет\fn{finder??}, кот и́щет\fn{søger??}.
+         \mitem За чем пойдёшь\fn{søger}, то и найдёшь\fn{finder}.
+         \mitem Кто и́щет, тот всегда́ найдёт.
+         }
+% \ordsprog{En times \mw{søvn} før midnat er bedre end to derefter.}
+%              {Кто ра́но встаёт\fn{står op.}, тому́ Бог подаёт\fn{giver}\fn{samme betydning?}.}
+% \dui{søvn}
+% \ordsprog{\mwni{Søvn} er drukken mands lægedom.}{
+% Бо́льше спишь, ме́ньше греши́шь.\fn{=De, som sover, synder ikke.}}
+\dui{så}
+\ordsprog{Hvad du \mwni{sår}, skal du og høste.}
+        {Что посе́ешь\fn{sår, spreder}, то и пожнёшь\fn{høster}.
+        \mitem Какова́ земля́\fn{jord}, тако́в и хлеб\fn{brød}.
+        \mitem Кокова́ земля́, тако́в и плод'\fn{frugt}.}
+\ordsprog{Det \mw{sår}, man altid piller ved, læges aldrig.}
+              {Не сле́дует\fn{bør} береди́ть\fn{rippe op i} ста́рую ра́ну\fn{sår}.}
+%slettet \ordsprog{De værste \mw{sår} er dem, der ikke bløder.}
+%         {Ста́рые ра́ны зажива́ют.}
+\letter{T}
+%\ordsprog{Den enes vinding er den andens \mw{tab}.}
+%              {Рабо́тнику алты́н, а наря́дчику рубль.}
+\dui{tak}
+\ordsprog{\mwni{Tak} koster ingenting.}
+         {Спаси́бо вели́ко\fn{stort} сло́во (де́ло).}
+\dui{tale}
+\ordsprog{\mwni{Tale} er sølv, tavshed guld.}
+          {Сло́во --- серебро́, молча́ние зо́лото.
+        \mitem Ска́зано --- серебро́, не ска́зано --- зо́лото
+        \mitem Ска́занное сло́во сере́бряное, не ска́занное --- золото́е}
+\ordsprog{Ud i sød \mw{tale} ligger falskhed i dva\-le.}
+         {На слова́х медо́к\fn{honning, nektar}, а на се́рдце ледо́к\fn{is.}.}
+\dui{tanker}
+\ordsprog{\mwni{Tanker} er toldfri.}
+    {Со слов по́шлины\fn{told(afgifter)} не беру́т\fn{tager}.
+        \mitem Всяк во́лен\fn{fri} ду́мать что хо́чет.}
+\ordsprog{Hver ting har sin \mw{tid}.}
+               {Вся́кому о́вощу\fn{grøntsag} (фру́кту) своё вре́мя.
+        \mitem Знай вре́мя и ме́сто.
+        % slettet \mitem Всё стои́т до поры́, до вре́мени.
+        }
+\ordsprog{Hver ting til sin \mw{tid}.}
+               {Всему́ своё вре́мя.}
+\ordsprog{Den \mw{tid}, den sorg.}
+              {Отло́жим\fn{udsætter}, до поры́\fn{til senere(tid)} до вре́мени.}
+\ordsprog{Kommer \mw{tid}, kommer råd.}
+       {У́тро ве́чера мудрене́е\fn{klogere}.
+       \mitem Поживём --- уви́дим
+       \mitem Пора́ на ум наво́дит\fn{bringe, føre lede}.
+        \mitem Вре́мя пока́жет\fn{vise, demonstrere}.
+        \mitem Придёт беда́\fn{ulykke, nød}, ку́пишь\fn{køber} ума́.
+        \mitem Вре́мя всему́ нау́чит.
+        \mitem Вре́мя ра́зум\fn{fornuft, forstand} даёт.}
+\dui{tid}
+\ordsprog{\mwni{Tiden} læger alle sår.}
+        {Вре́мя ле́чит\fn{læger, heler} все ра́ны\fn{sår}.
+        \mitem Вре́мя лу́чший ле́карь\fn{læge}.
+        \mitem Вре́мя вели́кий цели́тель\fn{læge}.}
+\dui{tid}
+\ordsprog{\mwni{Tiden} iler.}
+     {День и ночь, и су́тки\fn{døgn} прочь\fn{bort(e), væk, gået}.}
+\dui{tid}
+\ordsprog{\mwni{Tid} er penge.}
+         {Вре́мя --- де́ньги.}
+\dui{tid}
+\ordsprog{Ny \mwni{tider}, nye sæder.}
+        {Ины́е\fn{andre} времена́, ины́е нра́вы\fn{sæder, skikke} (пе́сни\fn{sange}).
+        \mitem Ино́е вре́мя, ино́е бре́мя.}
+\dui{tie}
+\ordsprog{Den, der \mwni{tier}, samtykker.}
+              {Молча́ние --- знак\fn{tegn} согла́сия\fn{enighed}.
+        \mitem До́брое молча́ние чем не отве́т?}
+\dui{tie}
+\ordsprog{\mwni{Tie} og tænke kan ingen krænke.}
+         {Молча́нкой\fn{tavshed, tien} никого́ не оби́дишь\fn{krænke}.
+         \mitem Смолча́ть никого́ не оби́дет.}
+\dui{tilfredshed}
+\ordsprog{\mwni{Tilfredshed} er bedre end rigdom.}
+         {Дома́шный\fn{hjemlig} телёнок\fn{kalv} лу́чше замо́рской\fn{oversøisk} коро́вы\fn{ko}.}
+\ordsprog{Man kan ikke gøre alle \mw{tilpas}.}
+              {Всем не угоди́шь\fn{behager}.
+        \mitem На весь свет не угоди́шь.
+        \mitem Всем уго́длив\fn{tjenstivrig, indsmigrende, slesk}, так никому́ не приго́длив\fn{tilfredsstillet}.
+        \mitem И кра́сное со́лнышко\fn{solen (diminutiv)} на всех не угожда́ет.
+        \mitem На всех угожда́ть. --- самому́ в дурака́х сиде́ть.}
+\ordsprog{Hver \mw{ting} må ses fra to sider.}
+               {Ка́ждую вещь сле́дует рассма́тривать со всех сторо́н.}
+\ordsprog{Hver \mw{ting} har to sider.}
+               {Па́лка\fn{stav} о двух конца́х\fn{ender}.
+        \mitem У дуби́ны\fn{kæp, stok, kølle} два конца́.}
+\ordsprog{Det er umuligt at gøre to ting samtidigt.}{
+Нельзя́ де́лать одновре́менно две ве́щи.
+}
+\ordsprog{Den ene \mw{tjeneste} er den anden værd.}
+              {Услу́га\fn{tjeneste} за услу́гу.
+        \mitem Долг\fn{gæld} платежём\fn{betaler} кра́сен.}
+\dui{tom}
+\ordsprog{\mwni{Tomme} tønder buldrer mest.}
+           {Пуста́я бо́чка\fn{tønde, fad} пу́ще\fn{mere} греми́т\fn{drøner, tordner, larmer}.
+        \mitem В пусто́й бо́чке и зво́ну\fn{klang} мно́го.}
+\ordsprog{Е́n \mw{tosse} kan spørge om mere end ti viise
+             kan besvare.}
+         {Дура́к зада́ст вопро́с, а де́сять у́мных не отве́тят.
+        \mitem Дура́к в во́ду ка́мень заки́нет\fn{?}, деся́теро
+         у́мных не вы́тащат\fn{trække ud, slæbe ud}.}
+\ordsprog{Alle gode gange \mw{tre}.}
+      {Бог лю́бит тро́ицу\fn{treenighed, trio}.}
+%\dui{troskab}
+%\ordsprog{\mwni{Troskab} er en sjælden gæst.}{}
+\dui{tryk}
+\ordsprog{\mwni{Tryk} avler modtryk.}
+     {Си́ла\fn{kraft, styrke} си́лу ло́мит\fn{presse, trykke ned, være ved at knække}.
+        % slettet \mitem Си́ла всё ло́мит.
+        }
+\ordsprog{Godt \mw{træ} bærer gode \di{æbler}.}{
+    Какого́ де́рево, тако́в и плод\fn{frugt}.
+    \mitem По де́реву плод.
+}
+\ordsprog{Kroget træ kan også bære god frugt.}{
+    Криво́е\fn{skæv, krum} де́рево, да я́блоки\fn{æbler} сла́дки\fn{søde}.
+}
+\dui{træ}
+\dui{frugt}
+\ordsprog{Man kender \mwni{træet} på dets frugter.}
+         {
+         Каково́ де́рево  тако́в и плод\fn{frugt}.
+        \mitem Каково́ де́рево  таковы́ и су́чья\fn{\ru{сук}=gren}.
+        \mitem По де́реву плод.
+        \mitem От я́блони\fn{æbletræ} плод, а от е́ли\fn{grantræ} --- ши́шка\fn{kogle}.
+%        \mitem Знать со́кола по полёту,
+%               а до́брого молодца́ по похо́дке.
+}
+%\ordsprog{Godt \mw{træ} bærer gode æbler.}
+%        {Каково́ де́рево, тако́в и плод.
+%        \mitem По де́реву плод.}
+\dui{træ}
+\ordsprog{Når \mwni{træet} falder, vil alle samle
+   spåner (brænde)/Af et fældet træ laver alle spåner.}
+      {
+      % Где лес\fn{skov} ру́бят\fn{hugger, fælder}, ще́пки\fn{spåner} летя́т\fn{flyver}\fn{samme betydning?}.
+        В гото́вую посте́ль\fn{seng, sengetøj} всяк лечь захо́чет\fn{får lyst til}.}
+\dui{træ}
+\ordsprog{\mwni{Træerne} vokser ikke ind i himlen.}
+        {Де́ревья до небе́с не расту́т.
+        \mitem Вы́ше\fn{over} лба\fn{pande} у́ши не рaсту́т\fn{vokser}.}
+\dui{tugte}
+\ordsprog{Den, man \di{elsker}, \mwni{tugter} man.}
+        {Кого́ люблю́, того́ и бью\fn{slår}.}
+\dui{tunge}
+\ordsprog{\mwni{Tungen} er et lidet lem og kommer store ting afsted.}
+             {Держи́\fn{hold fast} язы́к\fn{tunge} за зуба́ми\fn{tænder}.
+        \mitem Держи́ язы́к коро́че\fn{kort}.}
+\ordsprog{Lejlighed gør tyve.}
+{Пло́хо не клади́\fn{put, anbring}, во́ра\fn{tyv} в грех\fn{synd} не вводи́\fn{fører, leder ind i}.}
+\dui{tyv}
+\ordsprog{\mwni{Tyv} tror hver mand stjæler.}
+           {Всяк на свой арши́н\fn{russisk mål: 71 cm} ме́рит\fn{måler, skridter af}.
+        \mitem Ме́рить други́х на свой арши́н.}
+%\ordsprog{Enhver er \mw{tyv} i sin næring.}
+\dui{tyv}
+\dui{hænge}
+\dui{hatten}
+\dui{løbe}
+\ordsprog{Små \mwni{tyve} hænges op, store tager man hatten af for. (store lader man løbe.)}
+         {Копе́ечного\fn{kopek-} (алты́нного\fn{\ru{алты́н}: tre kopek}) во́ра\fn{tyv} веша́ют\fn{hænger}, полти́нного\fn{\ru{полти́на}: halv rubel} че́ствуют\fn{ærer}.
+       % \mitem Бога́тому\fn{rigmand} идти́ в суд\fn{domstol, ret} --- трын-трава́\fn{(egtl. råddent hø), det rager dem ikke.}, бе́дному\fn{fattig} --- доло́й\fn{bort, væk} голова́.
+% \mitem Мелкин воро́в ве́лкют, а больнине гуляютна свобо́де.
+       }
+\ordsprog{En gang \mw{tyv}, altid tyv.}
+         {Раз укра́л\fn{stjal}, а всё во́ром\fn{tyv} стал.}
+\dui{tyvelykke}
+\ordsprog{\mwni{Tyvelykke} er galgenfrist.}
+         {Ско́лько во́ру не ворова́ть\fn{stjæle, rapse}, а кнута́\fn{pisk} не минова́ть\fn{undgå}.}
+\dui{tålmodighed}
+\ordsprog{\mwni{Tålmodighed} overvinder alt.}
+   {Терпе́ние\fn{Tålmodighed} и труд\fn{arbejde, besvær} всё перетру́т\fn{overvinder}.}
+\letter{U}
+\dui{udholdenhed}
+\ordsprog{\mwni{Udholdenhed} overvinder alt.}
+         {Терпе́ние и труд всё перетру́т.}
+\dui{udholdenhed}
+%slettet \ordsprog{\mwni{Udholdenhed} belønnes.}
+%         {Без труда́ не вы́нешь ры́бку из пруда́.}
+\dui{udsætte}
+\ordsprog{\mwni{Udsæt} ikke til i morgen, hvad du kan gøre i dag.}
+         {Не откла́дивай\fn{henlæg, udskyd} на за́втра, что мо́жно де́лать сего́дня.
+         \mitem Одно́ ны́нче\fn{i dag} лу́чше двух за́втра.}
+\dui{uheld}
+\ordsprog{Når \mwni{uheldet} skal være, kan
+          man brække fingeren i røven på en gammel kælling.}
+         {Кому́ не везёт\fn{lykkedes med, have held med}, тот в мы́ле\fn{sæbe} на гвоздь\fn{søm} наткнётся\fn{støde mod}.
+        \mitem  Кому́ не везёт, тот и в творогу́\fn{knapost, skørost}
+        (ква́су\fn{drik brygget på rugbrød}) на ши́ло\fn{syl} наткнётся.}
+\dui{ukrudt}
+\ordsprog{\mwni{Ukrudt} forgår ikke så let.}
+         {Дурна́я\fn{dårligt} трава́\fn{græs} в рост\fn{vækst} идёт.
+        %\mitem Худо́е спо́ро\fn{diskussion??} не изживёшь\fn{udrydde, få has på} (сживёшь) ско́ро\fn{ryge ud, trænge ud}.
+        }
+\dui{ulv}
+ \ordsprog{\mwni{Ulven} skifter hår, men skifter ikke sind.}
+         {Волк и вся́кий год линя́ет\fn{fælder, skifter ham}, а нра́ва\fn{gemyt, karakter, væsen} не меня́ет\fn{bytte ud, forandre, skifte}.}
+\dui{ulv}
+\ordsprog{Man må tude med de \mwni{ulve}, man er iblandt.}
+         {С волка́ми жить --- по-во́лчьи выть\fn{tude, hyle}.}
+\ordsprog{Den ene \mw{ulv} æder ikke den anden.}
+         {Во́рон\fn{ravn} во́рону глаз гла́за не вы́клюет\fn{hakker ud}.
+         % \mitem Свой своему́ понево́ле\fn{tvungent, nødvilligt} брат\fn{tager??}.
+         }
+% slettet \ordsprog{Almindelig \mw{ulykke} trøster.}
+%         {Чужа́я беда́ --- смех.}
+\ordsprog{Én \mw{ulykke} kommer sjældent alene. / Den ene ulykke har den anden ved hånden.}
+         {Беда́\fn{ulykke} не хо́дит одна́.
+        \mitem Одна́ беда́ не хо́дит.
+%        \mitem Беда́ скоро хо́дит.
+        \mitem Беда́ бе́ду ро́дит\fn{afføder, avler}.
+        }
+\dui{ung}
+\ordsprog{\mwni{Unge} til hjælp, gamle til råd.}
+         {Мо́лодость плеча́ми\fn{skuldre} кре́пче\fn{stærkere}, ста́рость голово́й.}
+\dui{ungdom}
+\ordsprog{\mwni{Ungdommen} raser.}
+         {Вся́кая мо́лодость ре́звости\fn{løssluppenhed?} полна́.}
+\dui{ungdom}
+\ordsprog{\mwni{Ungdom} og skønhed forsvinder hurtigt.}
+         {Не ищи́\fn{søg} красоты́\fn{skønhed}, ищи́ доброты́\fn{godhed}.
+%        \mitem С лица́ не во́ду пить, уме́ла бы пироги́ печь.
+}
+\dui{ungdom}
+\ordsprog{Hvad man i \mwni{ungdommen} nemmer,
+          man ikke i alderdommen glemmer.}
+         {Что в де́тстве\fn{barndom} вы́учено\fn{lært (udenad)}, в ста́рости не забыва́ется\fn{forglemmer, døser hen}.}
+\dui{utak}
+\ordsprog{\mwni{Utak} er verdens løn.}
+         {Нет в ми́ре благода́рности\fn{taknemmelighed, påskønnelse}.
+         \mitem В э́том ми́ре не заслу́жишь\fn{gjort dig fortjent til} благодарности.
+        \mitem В э́том ми́ре бладода́рность не жди́\fn{forvent}.}
+\letter{V}
+\dui{vade}
+\ordsprog{\mwni{Vad} ikke over vandet, hvis du ikke ser bunden.}
+         {Не зна́я бро́ду\fn{vadested}, не су́йся\fn{stik næsen i??} в во́ду.}
+\ordsprog{Det stille \mw{vand}, den dybe grund.}
+        {
+        В ти́хой воде́ о́муты\fn{malstrømme, hvirvler} глубоки́\fn{dybe}.
+        \mitem Ти́хие во́ды глубоки́.
+        % slettet \mitem В ти́хом о́муте че́рти во́дятся.
+        % slettet \mitem Ти́ха(я) вода́ берега́ подмыва́ет.
+        }
+\ordsprog{Man skal ikke kaste snavset \mw{vand} bort, før man har det rene.}
+         {Не плюй\fn{spyt} в коло́дец\fn{brønd}, пригоди́тся\fn{bliver til nytte} воды́ напи́ться\fn{at drikke}.}
+\dui{vand}
+\ordsprog{I rørte \mwni{vande} er godt at fiske.}
+         {В му́тной\fn{uklar, grumset, plumret sløret} воде́ ры́бу лови́ть\fn{fange}\fn{samme betydning?}.}
+\dui{vane}
+\ordsprog{\mwni{Vanen} er det halve liv.}
+         {Привы́чка\fn{vane, sædvane} --- втора́я\fn{anden} нату́ра\fn{natur} (приро́да\fn{natur}).
+        % slettet \mitem Со́колу лес не в ди́во.
+        }
+\dui{vare}
+\ordsprog{Gode \mwni{varer} roser sig selv.}
+         {Хоро́ший това́р сам себя́ хва́лит\fn{roser}.}
+\ordsprog{Hvad én \mw{ved}, ved ingen. Hvad to eller tre vide, det vide alle.}
+         {Ска́жешь с у́ха\fn{øre} на́ ухо, узна́ют с
+         угла́\fn{hjørne} на́ угол.
+        \mitem Говори́шь по сове́ту, а вы́йдет по всему́ све́ту.}
+\dui{vej}
+\ordsprog{Tryggest er gamle \mwni{veje} og gamle venner.}
+         {Но́вых друзе́й нажива́й\fn{tjen ind, erhverv dig}, а ста́рых не теря́й\fn{mist ikke, tab ikke}.}
+\ordsprog{Det er bedst at køre på banet \mw{vej}.  / Den lige vej er næst, men ikke altid bedst.}
+         {Где ви́ден путь прямо́й\fn{lige}, там не е́зди
+         по криво́му\fn{kurvet, skæv}.}
+\ordsprog{I \mw{velstand} er der mange venner.}
+         {
+         Мно́го друзе́й, ко́ли\fn{(gl.) hvis, når} де́нежки\fn{penge} есть
+         }
+\ordsprog{En god \mw{ven} er mere værd end hundrede frænder.}
+         {Ста́рый друг лу́чше но́вых двух\fn{to}.}
+\ordsprog{En \mw{ven} på vejen er så god som penge i pungen.}
+         {Не име́й\fn{skaf dig} сто рубле́й, а име́й сто друзе́й.}
+\ordsprog{Lån din \mw{ven} og afkræv din \di{fjende}.}
+         {Дру́жба\fn{venskab} дру́жбой, а в карма́н\fn{lomme}  лезь\fn{stik hånden}.}
+\ordsprog{Hver mands \mw{ven}, hver mands nar.}
+         {Не вся́кому дру́гу верь\fn{tro på}.}
+%\ordsprog{Med \mw{venlighed} (\di{lempe}) kommer man længst.}
+%         {И си́ла\fn{styrke} уму́\fn{forstand} уступа́ет\fn{viger for}.}
+\ordsprog{Godt \di{regnskab} giver godt \mw{venskab}.}
+         {Ча́ще счёт\fn{afregning}, кре́пче\fn{stærkere} (до́льше\fn{længere (varighed)}) дру́жба.}
+\dui{venskab}
+\ordsprog{\mwni{Venskab} for sig, tjeneste for sig.}
+        {Дру́жба\fn{venskab} дру́жбой, а слу́жба\fn{tjeneste} слу́жбой.}
+
+\ordsprog{Noget for \di{noget}, om \mw{venskab} skal holdes.}
+         {Дар\fn{gave} да́ра ждёт\fn{venter}.}
+\ordsprog{Når \di{maden} er spist, er \mw{venskab} ude.}
+         {Хле́ба нет, друзе́й и не быва́ло\fn{kunne forekomme, hænde}.
+         \mitem Ска́терть\fn{(bord)dug} со стола́ и дру́жба\fn{venskab} сплыла́\fn{brød sammen}.
+         }
+\dui{ventetid}
+\ordsprog{Ventetiden falder lang.}
+         {Когда́ ждёжь, вре́мя идёт ме́дленно.}
+\dui{verden}
+%\ordsprog{\mwni{Verden} er vid.}
+%         {Бе́лый\fn{hvid} свет\fn{verden} на во́лю\fn{vilje, frihed} дан\fn{given?}.}
+\ordsprog{Der er en \mw{verden} uden for Verona. /
+          Verden er stor og livet langt.}
+         {Свет не кли́ном\fn{kile} сошёлся\fn{blev venner med}.}
+\dui{verden}
+\dui{vide}
+\ordsprog{Hvis \di{ungdommen} \mwni{vidste}, hvis \di{alderdommen} kunne.}
+         {Е́сли бы мо́лодость зна́ла, е́сли
+           бы ста́рость могла́.}
+%  \ordsprog{Én mands \mw{vidende} er intet vidende.}
+%           {Одни́м конём всего́ по́ля не изъе́здишь.}
+\dui{vin}
+\ordsprog{\mwni{Vin} fryder hjertet.}
+         {Вино́ се́рдце челове́ка весели́т\fn{morer, forlyster, opmuntrer}.
+%        \mitem Вино́ весели́т се́рдце челове́ку.
+        }
+\dui{vin}
+\dui{øl}
+\ordsprog{Når \mwni{vinen}(øllet) går ind, går forstanden ud.}
+         {Хмель\fn{humle (beruselse)} шуми́т\fn{larmer, støjer}, ум молчи́т\fn{tier}.}
+%\ordsprog{Man kan ikke leve af \di{luftsteg} og %\mw{vindfrikadeller}.}
+%         {Не наесться куско́м, не нате́шиться дружко́м.}
+\ordsprog{In \mw{vino} veritas.}
+         {и́стина в вине́.
+         \mitem Вся пра́вда в вине́.
+        \mitem Винцо́\fn{diminutiv af \ru{вино́}} кра́сит\fn{forskønner} се́рдце и лицо́\fn{ansigt}.}
+\dui{vove}
+\ordsprog{Hvo intet \mwni{vover} intet vinder.}
+         {Ниче́м не ри́скуя, ничего́ не добу́дешь\fn{fanger, (frem)skaffer, tager}.
+        \mitem Без риска́ жизнь пресна́\fn{fersk, usyret(om brød), fad, flov}.}
+\dui{vove}
+\ordsprog{Dristigt \mwni{vovet} er halvt vundet.}
+         {Сме́лость\fn{dristighed, vovemod} города́ берёт\fn{indtager}.}
+%\dui{vrede}
+%%\ordsprog{\mwni{Vrede} er et kortvarigt raseri.}
+%         {Зло́ба --- глу́пость.}
+\dui{vrede}
+\ordsprog{\mwni{Vrede} er kærligheds fornyelse.}
+         {Ми́лые'\fn{kære, søde, rare} браня́тся\fn{skændes}, то́лько те́шатся\fn{morer sig, adspreder}.}
+\dui{væg}
+\ordsprog{\mwni{Væggene} har øren.}
+         {Сте́ны име́ют у́ши.
+        \mitem Есть у меня́ слове́чко\fn{diminutiv af \ru{сло́во}} да
+          волк недале́чко (недалеко́)}
+\ordsprog{Lystig \mw{vært} gør glad gæst.}
+         {Како́в хозя́ни\fn{ejer, indehaver, husbond}, таковы́ и го́сти.}
+\letter{Æ}
+\dui{æble}
+\ordsprog{Når \mwni{æblet} er modent, så falder det.}
+         {Не тряси́\fn{ryst} я́блоко, пока́ зелено́\fn{grøn},
+            созре́ет\fn{modner}, само́ упадёт\fn{falder}.}
+\dui{æble}
+\ordsprog{\mwni{Æblet} falder ikke langt fra stammen.}
+         {Я́блоко от я́блони\fn{æbletræ} (я́блоньки)
+             недалеко́ па́дает.
+%        \mitem Ми́мо я́блоньки яблочко па́дает.
+        \mitem По ма́тери до́чка.}
+\dui{æg}
+\ordsprog{\mwni{Ægget} vil lære hønen.}
+         {Я́йца ку́рицы не у́чат.}
+\ordsprog{Et råddent \mw{æg} ødelægger hele kag\-en.}
+         {От одного́ по́рченого\fn{fordærvet} я́блока це́лый\fn{hel, fuld}
+              воз\fn{vognlæs} загнива́ет\fn{rådner}.
+        \mitem Ло́жка дёгтя испо́ртит бо́чку\fn{fad} мёду.}
+\dui{ægteskab}
+%\ordsprog{\mwni{Ægteskabet} er som en åleruse, de der er ude, vil ind, og de der er inde, vil ud.}
+%{Оди́н жени́лся, --- свет\fn{lyset} увида́л\fn{så?}; друго́й
+%          жени́лся --- с голово́ю\fn{hoved} пропа́л\fn{forsvandt?}\fn{samme betydning?}.}
+% slettet \ordsprog{Ondt \mw{ægteskab} er skærsild i dette liv.}
+%         {Одному́ с жено́ю ра́дость, друго́му го́ре.}
+\dui{ære}
+\ordsprog{Nogen får \mwni{æren}, andre besværen.}
+         {Бо́льше почёта\fn{ære}, бо́льше хлопо́т\fn{besvær}.
+%        \mitem Шве́цу гри́вна, закро́йчику рубль.
+        }
+\dui{ære}
+\ordsprog{\mwni{Ære} den som æres bør.}
+         {Честь тому́, кто че́сти досто́ин\fn{fortjener, værdig}.}
+\dui{ærlighed}
+\ordsprog{\mwni{Ærlighed} varer længst.}
+         {Че́стность\fn{ærlighed} долгове́чна\fn{holdbar, solid}.
+        \mitem Че́стность --- лу́чшая\fn{bedre} поли́тика\fn{politik}.
+%        \mitem Пра́ведная\fn{ærligt tjent} де́нежка\fn{penge} до́ веку\fn{århundrede, tidsalder} живёт.
+        %\mitem Че́стность --- лу́чшая полити́ка.
+        }
+\letter{Ø}
+\dui{øje}
+\ordsprog{Hvad \mwni{øjet} ikke ser, har hjertet ikke ondt af.}
+        {Что глаза́ не ви́дят, то се́рдце
+             не береди́т\fn{ripper op i}.}
+\dui{øje}
+\ordsprog{Fire \mwni{øjne} ser bedre end to.}
+         {Ум хорошо́, два лу́чше.
+         \mitem Одна́ голова́ хорошо́, а две лу́чше.
+         }
+\ordsprog{Øje for \mw{øje}, tand for tand.}
+         {О́ко за о́ко, зуб за зуб.}
+\ordsprog{Ude af \mw{øje}, ude af sind.}
+         {С глаз доло́й\fn{væk, bort fra}, из се́рдца(из па́мяти\fn{hukommelse}) вон\fn{ud, væk} .
+        \mitem Вон из глаз, вон из се́рдца.}
+\ordsprog{Hvad man \mw{ønsker}, tror man let.}
+         {Чего́ жела́ешь, о том мечта́ешь\fn{drømmer, fantaserer}.
+         \mitem Ле́гко пове́рить тому́, чего́ стра́стно\fn{inderligt} жела́ешь.
+        \mitem Мы ле́гко ве́рим в то, чего́ хоти́м.
+        }
+\dui{øre}
+\ordsprog{Sultne maver har ingen \mwni{ører}.}
+         {Сы́тое\fn{mæt, fed velnæret} брю́хо\fn{bug, vom} к уче́нью\fn{undervisning} глу́хо\fn{døv, tunghør}.}
+\dui{øren}
+\ordsprog{Små gryder har også øren.}{
+У ма́леньких кувшинов\fn{kande} то́же есть у́ши.
+}
+\dui{ørn}
+\ordsprog{\mwni{Ørne} udklægger ikke dueunger.}
+        {Не роди́т\fn{føder} ве́рба\fn{pil (træ)} гру́ши\fn{pære}.
+        \mitem Орёл\fn{ørn} орла́ роди́т, а сова́\fn{ugle} сову́.}
+\dui{øvelse}
+\ordsprog{\mwni{Øvelse} gør mester.}
+        {На́вык\fn{evne, færdighed, rutine} ма́стера ста́вит\fn{anbringer, anstiller}.
+        \mitem По вы́учке\fn{uddannelse, oplæren, læren udenad} ма́стера знать.
+%        \mitem Чему́ учи́лся, тому́ и пригоди́лся\fn{blev til nytte(gavn)}.
+        }
+\letter{Å}
+\dui{å}
+\ordsprog{Man skal ikke gå over \mwni{åen} efter vand.}
+         {Ходи́ть по́ воду за ре́чку\fn{diminutiv af \ru{река} -- flod, strøm}.
+       % \mitem Е́здить в Ту́лу со свои́м самова́ром.\fn{ligner "give hvedebrød til bagerbørn"}
+        }
+\dui{ånd}
+\ordsprog{\mwni{Ånden} er vel redebon, men kødet er skrøbeligt.}
+        {Дух\fn{ånd} бодр\fn{frisk, kvik, frejdig}, плоть\fn{kød, legeme} же немо́щна\fn{kraftesløs, skrøbelig, syg, affældig}.}
+\ordsprog{Af ringe \mw{årsag} stor krig.}
+         {От одного́ сло́ва --- да на век\fn{århundrede, levealder} ссо́ра\fn{skænderi, uvenskab}.}
+\dui{ånd}
+\ordsprog{\di{Salige} er de fattige i \mwni{ånden}.}
+         {Блаже́нны ни́щиe\fn{fattige} ду́хом.}
+% \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\printindex{dansk}{Dansk stikordsregister}
+%\printindex{russisk}{Russisk stikordsregister} %\ru{Русский индекс}}
+\end{document}
+
+%sagemathcloud={"latex_command":"xelatex -interact=nonstopmode 'ordsprog-xelatex.tex'"}
+
+
